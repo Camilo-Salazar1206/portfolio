@@ -1,0 +1,50 @@
+.home {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.home__nav {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    margin-bottom: 2%;
+}
+
+.home__main {
+    padding: 20px;
+    flex-grow: 1;
+}
+
+.home__start,
+.home__about-me,
+.home__skills,
+.home_experience,
+.home__proyects,
+.home__contact {
+    padding: 20px;
+    margin-bottom: 20px;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.home__start,
+.home__about-me,
+.home__skills,
+.home_experience,
+.home__proyects,
+.home__contact {
+    width: 100%;
+}
+
+.home__contact {
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    text-align: center;
+    color: white;
+    font-size: small;
+}

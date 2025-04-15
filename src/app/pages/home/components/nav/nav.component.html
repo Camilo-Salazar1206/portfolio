@@ -1,0 +1,25 @@
+<nav class="navbar" [ngClass]="{'scrolled': isScrolled}">
+
+    <div class="navbar__left-section">
+        <h3 class="navbar__logo">{{"name_icon" | translate}}</h3>
+    </div>
+    <div class="navbar__toggle" (click)="toggleMenu()">
+        <span class="navbar__toggle-line"></span>
+        <span class="navbar__toggle-line"></span>
+        <span class="navbar__toggle-line"></span>
+    </div>
+
+
+    <div class="navbar__side-menu" [ngClass]="{'open': isMenuOpen}">
+        <a *ngFor="let route of routeValues" class="navbar__side-menu__link" [href]="'#' + route.id" (click)="scrollToElement($event, route.id)">
+      {{ route.translation }}
+    </a>
+    </div>
+
+
+    <div class="navbar__right-section">
+        <a *ngFor="let route of routeValues" class="navbar__right-section__link" [href]="'#' + route.id" (click)="scrollToElement($event, route.id)">
+      {{ route.translation }}
+    </a>
+    </div>
+</nav>

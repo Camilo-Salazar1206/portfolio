@@ -1,0 +1,8 @@
+<div class="container">
+    <h2 class="skills__title">{{'working_experience' | translate}}</h2>
+    <div class="experiences">
+        <div class="experiences__content" *ngFor="let experience of experiences">
+            <app-experience-item [experienceTitle]="experience.title" [experienceDescription]="experience.description" [experienceCompany]="experience.company" [experienceDate]="experience.date"></app-experience-item>
+        </div>
+    </div>
+</div>

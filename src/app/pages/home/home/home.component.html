@@ -1,0 +1,26 @@
+<div class="home">
+    <nav class="home__nav">
+        <app-nav></app-nav>
+    </nav>
+    <main class="home__main">
+        <section [id]="routes.Home" class="home__start">
+            <app-start></app-start>
+        </section>
+        <section [id]="routes.About" class="home__about-me">
+            <app-about-me></app-about-me>
+        </section>
+        <section [id]="routes.Skills" class="home__skills">
+            <app-skills></app-skills>
+        </section>
+        <section [id]="routes.Work" class="home_experience">
+            <app-experience></app-experience>
+        </section>
+        <section [id]="routes.Proyects" class="home__proyects">
+            <app-proyects> </app-proyects>
+        </section>
+        <section [id]="routes.Contact" class="home__contact">
+            <app-contact-me></app-contact-me>
+        </section>
+        <p>{{'rigths' | translate}}</p>
+    </main>
+</div>

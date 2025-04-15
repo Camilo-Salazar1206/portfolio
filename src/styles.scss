@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background: linear-gradient(to right, #0a0f2c, #1e3a8a, #3b82f6);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #3b82f6;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0a0f2c;
+    border-radius: 20px;
+}

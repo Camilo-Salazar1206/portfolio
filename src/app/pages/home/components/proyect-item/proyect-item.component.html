@@ -1,0 +1,16 @@
+<div class="projects__content">
+    <div class="projects__image">
+        <img [src]="proyectImgUrl" alt="Imagen de {{ proyectTitle }}" />
+    </div>
+    <div class="projects__description">
+        <h2>{{ proyectTitle }}</h2>
+        <div class="projects__tecnologies">
+            <app-button *ngIf="frontTecnologie" [textButton]="frontTecnologie"></app-button>
+            <app-button *ngIf="backTecnologie" [textButton]="backTecnologie"></app-button>
+            <app-button *ngIf="dataBaseTecnologie" [textButton]="dataBaseTecnologie"></app-button>
+        </div>
+        <p class="projects__description-text">
+            {{ proyectDescription }}
+        </p>
+    </div>
+</div>

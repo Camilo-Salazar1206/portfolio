@@ -1,0 +1,44 @@
+.container {
+    margin-left: 1%;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+}
+
+.experiences {
+    color: white;
+    position: relative;
+    padding-left: 30px;
+}
+
+.experiences::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: #e0e0e0;
+}
+
+.experiences__content {
+    position: relative;
+}
+
+.experiences__content::before {
+    content: '';
+    position: absolute;
+    left: -34px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3b82f6;
+    ;
+}

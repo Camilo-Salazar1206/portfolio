@@ -1,0 +1,37 @@
+{
+    "name_app": "Portfolio Camilo",
+    "name": "- Camilo Salazar -",
+    "name_icon": "Camilo Salazar",
+    "role": "Desarrollador Junior / Frontend / +1 año de experiencia",
+    "rigths": "© Camilo Salazar. Casi todos los derechos reservados.",
+    "about_me_title": "Sobre mí",
+    "about_me_titles": {
+        "full_name": "Nombre completo: ",
+        "phone": "Teléfono: ",
+        "email": "Correo electrónico: ",
+        "city": "Ciudad: "
+    },
+    "about_me_details": {
+        "full_name": "Camilo Estevan Tacue Salazar",
+        "phone": "(+57) 3023534006",
+        "email": "c4m1loo12@gmail.com",
+        "city": "Popayán, Colombia"
+    },
+    "my_description_title": "</Hola, soy Camilo>",
+    "my_description": "👨‍💻 Soy un desarrollador Frontend especializado en Angular y TypeScript, enfocado en implementar arquitecturas limpias y escalables. 🤝 Me destaco en el trabajo en equipo bajo la metodología SCRUM, promoviendo una comunicación efectiva. 💻 Con dedicación y pasión por el desarrollo de software, busco siempre entregar soluciones de alta calidad y mejorar la experiencia del usuario.",
+    "available_to_work": "Disponible para trabajar",
+    "tecnologies": "Tecnologías",
+    "working_experience": "Experiencia laboral",
+    "proyects": "Proyectos",
+    "contact_me": "También me puedes encontrar en:",
+    "contact_me_text": "¿Tienes un proyecto en mente? Escríbeme.",
+    "linkedin": "LinkedIn",
+    "skills": {
+        "Tecnologies": "Tecnologías",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Base de Datos",
+        "tools": "Herramientas",
+        "learning_skills": "Tecnologias en Aprendizaje"
+    }
+}
