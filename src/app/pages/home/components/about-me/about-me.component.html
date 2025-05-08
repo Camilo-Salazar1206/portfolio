@@ -1,33 +1,34 @@
 <div class="profile">
-    <div class="profile__content">
-        <div class="profile__bio">
-            <h2>{{"my_description_title" | translate}}</h2>
-            <p class="profile__bio-text">
-                {{"my_description" | translate}}
-            </p>
-        </div>
-        <div class="profile__info">
-            <h2>{{"about_me_title" | translate}}
-            </h2>
-            <div class="profile__info-item">
-                <strong class="profile__info-item-label">{{"about_me_titles.full_name" | translate}}</strong>
-                <span>{{ 'about_me_details.full_name' | translate }}</span>
-            </div>
-            <div class="profile__info-item">
-                <strong class="profile__info-item-label">{{"about_me_titles.phone" | translate}}</strong>
-                <span>{{ 'about_me_details.phone' | translate }}</span>
-            </div>
-            <div class="profile__info-item">
-                <strong class="profile__info-item-label">{{"about_me_titles.email" | translate}}</strong>
-                <span><a href="mailto:{{ email }}" class="profile__info-item-link">{{'about_me_details.email' | translate }}</a></span>
-            </div>
-            <div class="profile__info-item">
-                <strong class="profile__info-item-label">{{"about_me_titles.city" | translate}}</strong>
-                <span>{{'about_me_details.city' | translate }}</span>
-            </div>
-
-        </div>
-
-
-    </div>
+  <div class="profile__content">
+      <div class="profile__bio">
+          <h2>{{"my_description_title" | translate}}</h2>
+          <p class="profile__bio-text">
+              {{"my_description" | translate}}
+          </p>
+      </div>
+      <div class="profile__info">
+          <h2>{{"about_me_title" | translate}}</h2>
+          <div class="profile__info-item">
+              <strong class="profile__info-item-label">{{"about_me_titles.full_name" | translate}}</strong>
+              <span>{{ 'about_me_details.full_name' | translate }}</span>
+          </div>
+          <div class="profile__info-item">
+              <strong class="profile__info-item-label">{{"about_me_titles.phone" | translate}}</strong>
+              <span>{{ 'about_me_details.phone' | translate }}</span>
+          </div>
+          <div class="profile__info-item">
+              <strong class="profile__info-item-label">{{"about_me_titles.email" | translate}}</strong>
+              <span>
+                  <a href="mailto:{{ email }}" class="profile__info-item-link">{{'about_me_details.email' | translate }}</a>
+                  <button class="copy-button" (click)="copyEmail()">
+                      <img src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png" alt="Copy Icon" />
+                  </button>
+              </span>
+          </div>
+          <div class="profile__info-item">
+              <strong class="profile__info-item-label">{{"about_me_titles.city" | translate}}</strong>
+              <span>{{'about_me_details.city' | translate }}</span>
+          </div>
+      </div>
+  </div>
 </div>
