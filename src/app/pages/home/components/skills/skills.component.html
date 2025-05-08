@@ -19,6 +19,8 @@
             <div class="skills__group-icons">
                 <app-skill-percentage class="skills__item" [skill]="TechnologyStack.NodeJS" [iconSkill]="iconDirections.NodeJS" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.NodeJS"></app-skill-percentage>
                 <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Express" [iconSkill]="iconDirections.Express" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Express"></app-skill-percentage>
+                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Java" [iconSkill]="iconDirections.Java" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Java"></app-skill-percentage>
+                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Springboot" [iconSkill]="iconDirections.Springboot" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Springboot"></app-skill-percentage>
             </div>
         </div>
     </div>
@@ -33,25 +35,61 @@
         </div>
 
         <div class="skills__group">
-            <h3 class="skills__group-title">{{ "skills.tools" | translate }}</h3>
-            <div class="skills__group-icons">
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.vsCode" [iconSkill]="iconDirections.vsCode" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.vsCode"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Github" [iconSkill]="iconDirections.Github" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Github"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Aws" [iconSkill]="iconDirections.Aws" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Aws"></app-skill-percentage>
-            </div>
-        </div>
+          <h3 class="skills__group-title">{{ "skills.tools" | translate }}</h3>
+          <div class="skills__group-icons">
+              <app-skill-percentage class="skills__item"
+                  [skill]="TechnologyStack.vsCode"
+                  [iconSkill]="iconDirections.vsCode"
+                  [style.animation-delay]="getRandomDelay() + 's'"
+                  [urlDocumentation]="documentationDirections.vsCode">
+              </app-skill-percentage>
+
+              <app-skill-percentage class="skills__item"
+                  [skill]="TechnologyStack.Github"
+                  [iconSkill]="iconDirections.Github"
+                  [style.animation-delay]="getRandomDelay() + 's'"
+                  [urlDocumentation]="documentationDirections.Github">
+              </app-skill-percentage>
+
+              <app-skill-percentage class="skills__item"
+                  [skill]="TechnologyStack.Aws"
+                  [iconSkill]="iconDirections.Aws"
+                  [style.animation-delay]="getRandomDelay() + 's'"
+                  [urlDocumentation]="documentationDirections.Aws">
+              </app-skill-percentage>
+
+              <app-skill-percentage class="skills__item"
+                  [skill]="TechnologyStack.Docker"
+                  [iconSkill]="iconDirections.Docker"
+                  [style.animation-delay]="getRandomDelay() + 's'"
+                  [urlDocumentation]="documentationDirections.Docker">
+              </app-skill-percentage>
+          </div>
+      </div>
+
     </div>
 
     <div class="skills__row">
-        <div class="skills__group">
-            <h3 class="skills__group-title">
-                {{ "skills.learning_skills" | translate }}
-            </h3>
-            <div class="skills__group-icons">
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Java" [iconSkill]="iconDirections.Java" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Java"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Springboot" [iconSkill]="iconDirections.Springboot" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Springboot"></app-skill-percentage>
+      <div class="skills__group">
+        <h3 class="skills__group-title">
+          {{ "skills.learning_skills" | translate }}
+        </h3>
+        <div class="skills__group-icons">
+          <app-skill-percentage class="skills__item"
+              [skill]="TechnologyStack.Jetpack"
+              [iconSkill]="iconDirections.jetpack"
+              [style.animation-delay]="getRandomDelay() + 's'"
+              [urlDocumentation]="documentationDirections.Jetpack">
+          </app-skill-percentage>
+          <app-skill-percentage class="skills__item"
+    [skill]="TechnologyStack.Kotlin"
+    [iconSkill]="iconDirections.Kotlin"
+    [style.animation-delay]="getRandomDelay() + 's'"
+    [urlDocumentation]="documentationDirections.Kotlin">
+</app-skill-percentage>
 
-            </div>
         </div>
+      </div>
     </div>
+
 </div>

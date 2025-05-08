@@ -2,7 +2,7 @@
     "name_app": "Portfolio Camilo",
     "name": "- Camilo Salazar -",
     "name_icon": "Camilo Salazar",
-    "role": "Desarrollador Junior / Frontend / +1 año de experiencia",
+    "role": "Desarrollador Junior / Frontend / Backend /+1 año de experiencia",
     "rigths": "© Camilo Salazar. Casi todos los derechos reservados.",
     "about_me_title": "Sobre mí",
     "about_me_titles": {
@@ -32,6 +32,6 @@
         "backend": "Backend",
         "database": "Base de Datos",
         "tools": "Herramientas",
-        "learning_skills": "Tecnologias en Aprendizaje"
+        "learning_skills": "Competencias tecnológicas en desarrollo y perfeccionamiento"
     }
 }

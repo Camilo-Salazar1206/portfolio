@@ -1,17 +1,17 @@
 <div class="profile">
-    <img class="profile__image" [src]="avatar" alt="Foto de perfil">
-    <app-button [url]="urlButtons.urlLinkedin"></app-button>
-    <h4 class="profile__name">{{ 'name' | translate }}</h4>
-    <p class="profile__title">{{'role' | translate}}</p>
-    <div class="profile__socials">
-        <a class="profile__socials__icon" href="http://www.linkedin.com/in/camilo-salazar1206" target="_blank">
-            <img src="https://cdn-icons-png.flaticon.com/512/4401/4401412.png" alt="LinkedIn" style="width: 32px; height: 32px;">
-        </a>
-        <a class="profile__socials__icon" href="https://github.com" target="_blank">
-            <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png" alt="GitHub" style="width: 32px; height: 32px;">
-        </a>
-        <a class="profile__socials__icon" href="https://drive.google.com/file/d/1oNRw6UuncMq6rhhxw3_9EqEMIP33APuO/view?usp=drive_link" target="_blank">
-            <img [src]="cvIcon" alt="CV" style="width: 32px; height: 32px;">
-        </a>
-    </div>
+  <img class="profile__image" [src]="avatar" alt="Foto de perfil">
+  <app-button [url]="urlButtons.urlLinkedin"></app-button>
+  <h4 class="profile__name">{{ 'name' | translate }}</h4>
+  <p class="profile__title">{{'role' | translate}}</p>
+  <div class="profile__socials">
+      <a class="profile__socials__icon" [href]="linkedinUrl" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/4401/4401412.png" alt="LinkedIn" style="width: 32px; height: 32px;">
+      </a>
+      <a class="profile__socials__icon" [href]="githubUrl" target="_blank">
+          <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png" alt="GitHub" style="width: 32px; height: 32px;">
+      </a>
+      <a class="profile__socials__icon" [href]="googleDriveUrl" target="_blank">
+          <img [src]="cvIcon" alt="CV" style="width: 32px; height: 32px;">
+      </a>
+  </div>
 </div>

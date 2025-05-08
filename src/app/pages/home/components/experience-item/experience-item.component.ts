@@ -10,5 +10,6 @@ export class ExperienceItemComponent {
   @Input() experienceCompany:string="";
   @Input() experienceDescription:string="";
   @Input() experienceDate:string="";
+  @Input() experienceTecnologies:string="";
 
 }

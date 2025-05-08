@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IFExperience } from '../../../../models/experience.interface';
-import { JobDateExperience, JobDescription, JobTitle } from 'src/app/core/enums/routes.enums';
+import { JobDateExperience, JobDescription, JobTecnologies, JobTitle } from 'src/app/core/enums/routes.enums';
 import { JobCompany } from '../../../../core/enums/routes.enums';
 
 @Component({
@@ -9,16 +8,19 @@ import { JobCompany } from '../../../../core/enums/routes.enums';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent {
+
+  JobTechnologiesMapping = {
+    FRONTEND_DEVELOPER: JobTecnologies.FRONTEND_DEVELOPER_PRAGMA,
+  };
+
+
   experiences = Object.keys(JobTitle).map(key => {
     return {
       title: JobTitle[key as keyof typeof JobTitle],
-      company:JobCompany[key as keyof typeof JobCompany] || JobCompany.PRAGMA,
-      date:JobDateExperience[key as keyof typeof JobDateExperience] || JobDateExperience.DATE_PRAGMA,
-      description: JobDescription[key as keyof typeof JobDescription]
+      tecnologies: this.JobTechnologiesMapping[key as keyof typeof JobTitle] || 'Tecnologías no disponibles',
+      company: JobCompany[key as keyof typeof JobCompany] || JobCompany.PRAGMA,
+      date: JobDateExperience[key as keyof typeof JobDateExperience] || JobDateExperience.DATE_PRAGMA,
+      description: JobDescription[key as keyof typeof JobDescription],
     }
-  })
-
-
-  }
-
-
+  });
+}

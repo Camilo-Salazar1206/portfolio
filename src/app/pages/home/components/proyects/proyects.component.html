@@ -1,9 +1,18 @@
 <div class="projects-container">
-    <h2 class="projects-container__title">{{'proyects' | translate}}</h2>
-    <div class="projects">
-        <div class="projects__content" *ngFor="let proyecto of proyectos">
-            <app-proyect-item [proyectTitle]="proyecto.title" [proyectDescription]="proyecto.description" [proyectImgUrl]="proyecto.imgUrl" [frontTecnologie]="skillStack.Angular">
-            </app-proyect-item>
-        </div>
-    </div>
+  <h2 class="projects-container__title">{{ 'proyects' | translate }}</h2>
+  <div class="projects">
+      <div class="projects__content" *ngFor="let proyecto of proyectos">
+          <app-proyect-item
+              [proyectId]="proyecto.id"
+              [proyectTitle]="proyecto.title"
+              [proyectDescription]="proyecto.description"
+              [proyectImgUrl]="proyecto.imgUrl"
+              [proyectUrl]="proyecto.url"
+              [frontTecnologie]="proyecto.frontTecnologie ?? ''"
+              [backTecnologie]="proyecto.backTecnologie ?? ''"
+              [dataBaseTecnologie]="proyecto.dataBaseTecnologie ?? ''"
+              [mobileTecnologie]="proyecto.mobileTecnologie ?? '' ">
+          </app-proyect-item>
+      </div>
+  </div>
 </div>

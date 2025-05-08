@@ -1,53 +1,61 @@
 .button-container {
-    width: auto;
+  width: auto;
+  padding: 6px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  border: solid white 1px;
+  position: relative;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white;
+  }
+
+  &::before {
+    left: -10px;
+  }
+
+  &::after {
+    right: -10px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 6px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    border: solid white 1px;
-    position: relative;
+    border-radius: 5px;
+    width: auto;
+    font-weight: bold;
+    font-size: 1.0rem;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background-color: #0a0f2c;
+    color: white;
+    border: none;
     cursor: pointer;
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        width: 1px;
-        background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+
+    &:hover {
+      background-color: white;
+      color: #0a0f2c;
+      text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6;
+      box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6;
     }
-    &::before {
-        left: -10px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: #1a1624;
+      }
     }
-    &::after {
-        right: -10px;
-    }
-    .button {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 6px;
-        border-radius: 5px;
-        width: auto;
-        font-weight: bold;
-        font-size: 1.0rem;
-        font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-        background-color: #0a0f2c;
-        color: white;
-        border: none;
-        cursor: pointer;
-        &:hover {
-            background-color: white;
-            color: #0a0f2c;
-            a {
-                color: #0a0f2c;
-            }
-        }
-        a {
-            text-decoration: none;
-            color: inherit;
-            &:hover {
-                color: #1a1624;
-            }
-        }
-    }
+  }
 }
