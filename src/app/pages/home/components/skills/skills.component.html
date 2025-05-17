@@ -1,95 +1,194 @@
 <div class="skills">
-    <h2 class="skills__title">{{ "skills.Tecnologies" | translate }}</h2>
+  <h2 class="skills__title">{{ "skills.Tecnologies" | translate }}</h2>
 
-    <div class="skills__row">
-        <div class="skills__group">
-            <h3 class="skills__group-title">{{ "skills.frontend" | translate }}</h3>
-            <div class="skills__group-icons">
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Angular" [iconSkill]="iconDirections.Angular" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Angular"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.TypeScript" [iconSkill]="iconDirections.TypeScript" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.TypeScript"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.JavaScript" [iconSkill]="iconDirections.JavaScript" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.JavaScript"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Html" [iconSkill]="iconDirections.Html" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Html"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Css" [iconSkill]="iconDirections.Css" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Css"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Scss" [iconSkill]="iconDirections.Scss" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Scss"></app-skill-percentage>
-            </div>
-        </div>
-
-        <div class="skills__group">
-            <h3 class="skills__group-title">{{ "skills.backend" | translate }}</h3>
-            <div class="skills__group-icons">
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.NodeJS" [iconSkill]="iconDirections.NodeJS" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.NodeJS"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Express" [iconSkill]="iconDirections.Express" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Express"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Java" [iconSkill]="iconDirections.Java" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Java"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.Springboot" [iconSkill]="iconDirections.Springboot" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.Springboot"></app-skill-percentage>
-            </div>
-        </div>
-    </div>
-
-    <div class="skills__row">
-        <div class="skills__group">
-            <h3 class="skills__group-title">{{ "skills.database" | translate }}</h3>
-            <div class="skills__group-icons">
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.MongoDB" [iconSkill]="iconDirections.MongoDB" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.MongoDB"></app-skill-percentage>
-                <app-skill-percentage class="skills__item" [skill]="TechnologyStack.MySQL" [iconSkill]="iconDirections.MySQL" [style.animation-delay]="getRandomDelay() + 's'" [urlDocumentation]="documentationDirections.MySQL"></app-skill-percentage>
-            </div>
-        </div>
-
-        <div class="skills__group">
-          <h3 class="skills__group-title">{{ "skills.tools" | translate }}</h3>
-          <div class="skills__group-icons">
-              <app-skill-percentage class="skills__item"
-                  [skill]="TechnologyStack.vsCode"
-                  [iconSkill]="iconDirections.vsCode"
-                  [style.animation-delay]="getRandomDelay() + 's'"
-                  [urlDocumentation]="documentationDirections.vsCode">
-              </app-skill-percentage>
-
-              <app-skill-percentage class="skills__item"
-                  [skill]="TechnologyStack.Github"
-                  [iconSkill]="iconDirections.Github"
-                  [style.animation-delay]="getRandomDelay() + 's'"
-                  [urlDocumentation]="documentationDirections.Github">
-              </app-skill-percentage>
-
-              <app-skill-percentage class="skills__item"
-                  [skill]="TechnologyStack.Aws"
-                  [iconSkill]="iconDirections.Aws"
-                  [style.animation-delay]="getRandomDelay() + 's'"
-                  [urlDocumentation]="documentationDirections.Aws">
-              </app-skill-percentage>
-
-              <app-skill-percentage class="skills__item"
-                  [skill]="TechnologyStack.Docker"
-                  [iconSkill]="iconDirections.Docker"
-                  [style.animation-delay]="getRandomDelay() + 's'"
-                  [urlDocumentation]="documentationDirections.Docker">
-              </app-skill-percentage>
-          </div>
-      </div>
-
-    </div>
-
-    <div class="skills__row">
-      <div class="skills__group">
-        <h3 class="skills__group-title">
-          {{ "skills.learning_skills" | translate }}
-        </h3>
-        <div class="skills__group-icons">
-          <app-skill-percentage class="skills__item"
-              [skill]="TechnologyStack.Jetpack"
-              [iconSkill]="iconDirections.jetpack"
-              [style.animation-delay]="getRandomDelay() + 's'"
-              [urlDocumentation]="documentationDirections.Jetpack">
-          </app-skill-percentage>
-          <app-skill-percentage class="skills__item"
-    [skill]="TechnologyStack.Kotlin"
-    [iconSkill]="iconDirections.Kotlin"
-    [style.animation-delay]="getRandomDelay() + 's'"
-    [urlDocumentation]="documentationDirections.Kotlin">
-</app-skill-percentage>
-
-        </div>
+  <div class="skills__row">
+    <div class="skills__group">
+      <h3 class="skills__group-title">{{ "skills.frontend" | translate }}</h3>
+      <div class="skills__group-icons">
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Angular"
+          [iconSkill]="iconDirections.Angular"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Angular"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.TypeScript"
+          [iconSkill]="iconDirections.TypeScript"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.TypeScript"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.JavaScript"
+          [iconSkill]="iconDirections.JavaScript"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.JavaScript"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Html"
+          [iconSkill]="iconDirections.Html"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Html"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Css"
+          [iconSkill]="iconDirections.Css"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Css"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Scss"
+          [iconSkill]="iconDirections.Scss"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Scss"
+        ></app-skill-percentage>
       </div>
     </div>
 
+    <div class="skills__group">
+      <h3 class="skills__group-title">{{ "skills.backend" | translate }}</h3>
+      <div class="skills__group-icons">
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.NodeJS"
+          [iconSkill]="iconDirections.NodeJS"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.NodeJS"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Express"
+          [iconSkill]="iconDirections.Express"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Express"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Java"
+          [iconSkill]="iconDirections.Java"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Java"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Springboot"
+          [iconSkill]="iconDirections.Springboot"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Springboot"
+        ></app-skill-percentage>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills__row">
+    <div class="skills__group">
+      <h3 class="skills__group-title">{{ "skills.database" | translate }}</h3>
+      <div class="skills__group-icons">
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.MongoDB"
+          [iconSkill]="iconDirections.MongoDB"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.MongoDB"
+        ></app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.MySQL"
+          [iconSkill]="iconDirections.MySQL"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.MySQL"
+        ></app-skill-percentage>
+      </div>
+    </div>
+
+    <div class="skills__group">
+      <h3 class="skills__group-title">{{ "skills.tools" | translate }}</h3>
+      <div class="skills__group-icons">
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.vsCode"
+          [iconSkill]="iconDirections.vsCode"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.vsCode"
+        >
+        </app-skill-percentage>
+
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Github"
+          [iconSkill]="iconDirections.Github"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Github"
+        >
+        </app-skill-percentage>
+
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Aws"
+          [iconSkill]="iconDirections.Aws"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Aws"
+        >
+        </app-skill-percentage>
+
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Docker"
+          [iconSkill]="iconDirections.Docker"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Docker"
+        >
+        </app-skill-percentage>
+      </div>
+    </div>
+  </div>
+
+  <div class="skills__row">
+    <div class="skills__group">
+      <h3 class="skills__group-title">
+        {{ "skills.learning_skills" | translate }}
+      </h3>
+      <div class="skills__group-icons">
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Jetpack"
+          [iconSkill]="iconDirections.jetpack"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Jetpack"
+        >
+        </app-skill-percentage>
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Kotlin"
+          [iconSkill]="iconDirections.Kotlin"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Kotlin"
+        >
+        </app-skill-percentage>
+      </div>
+    </div>
+  </div>
 </div>

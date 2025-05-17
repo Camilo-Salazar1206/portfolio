@@ -148,4 +148,6 @@ export enum NumbersEnum {
   TouchMoveThreshold = 100,
   MenuOffset = 80,
   ScrollDuration = 800,
+  ScrollSkills=300
+
 }
