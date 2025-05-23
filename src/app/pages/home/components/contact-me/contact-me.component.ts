@@ -9,21 +9,21 @@ import { Links } from 'src/app/core/enums/routes.enums';
 export class ContactMeComponent {
   links = Links;
   emailCopied = false;
+  email = 'c4m1loo12@gmail.com';
 
   copyEmail() {
-    const email = 'c4m1loo12@gmail.com';
-
-    navigator.clipboard.writeText(email).then(() => {
-
+    navigator.clipboard.writeText(this.email).then(() => {
       this.emailCopied = true;
-
-
       setTimeout(() => {
         this.emailCopied = false;
       }, 2000);
     }).catch(err => {
-
       console.error('Error al copiar el correo: ', err);
     });
+  }
+
+
+  openEmailClient() {
+    window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${this.email}`, '_blank');
   }
 }

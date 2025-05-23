@@ -3,16 +3,16 @@
 
   <div class="contact-me__section">
       <div class="contact-me__item">
-          <a class="contact-me__social-icon"  target="_blank">
+          <a class="contact-me__social-icon" target="_blank">
               <img class="contact-me__social-image" src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" alt="GitHub">
           </a>
           <div class="contact-me__text-wrapper">
-            <a class="contact-me__text" href="mailto:c4m1loo12@gmail.com">{{'about_me_details.email' | translate }}</a>
+            <a class="contact-me__text" (click)="openEmailClient()" style="cursor: pointer;">{{ email }}</a>
             <button class="copy-button" (click)="copyEmail()">
               <img src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png" alt="Copy Icon" />
             </button>
           </div>
-          <div *ngIf="emailCopied" class="copied-message">Correo copiado al portapapeles</div>
+          <div *ngIf="emailCopied" class="copied-message">{{ "copy_email" | translate }}</div>
       </div>
 
       <div class="contact-me__item">

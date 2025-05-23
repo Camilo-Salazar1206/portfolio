@@ -1,3 +1,7 @@
+<div class="copied-message" *ngIf="showCopiedMessageFlag">
+  {{ "copy_email" | translate }}
+</div>
+
 <div class="profile">
   <div class="profile__content">
       <div class="profile__bio">
@@ -19,7 +23,7 @@
           <div class="profile__info-item">
               <strong class="profile__info-item-label">{{"about_me_titles.email" | translate}}</strong>
               <span>
-                  <a href="mailto:{{ email }}" class="profile__info-item-link">{{'about_me_details.email' | translate }}</a>
+                  <a (click)="openEmailClient()" class="profile__info-item-link" style="cursor: pointer;">{{ email }}</a>
                   <button class="copy-button" (click)="copyEmail()">
                       <img src="https://cdn-icons-png.flaticon.com/512/1621/1621635.png" alt="Copy Icon" />
                   </button>
