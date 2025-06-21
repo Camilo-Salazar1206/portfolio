@@ -132,7 +132,7 @@ export enum urlButtons {
 }
 
 export enum JobTitle {
-  FRONTEND_DEVELOPER = 'Desarrollador Frontend',
+  FRONTEND_DEVELOPER = 'Aprendiz de desarrollo / Frontend',
   FULL_STACK_DEVELOPER = 'Desarrollador Full Stack',
 }
 
