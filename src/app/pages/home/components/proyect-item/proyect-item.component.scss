@@ -9,7 +9,6 @@
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
-    overflow: hidden;
     &__content {
         display: flex;
         flex-direction: row;
@@ -22,13 +21,6 @@
             flex: 1 1 50%;
             padding: 10px;
             border-radius: 8px;
-        }
-        .projects__description-text {
-            font-size: 1rem;
-            line-height: 1.6rem;
-            color: #e2e8f0;
-            margin-bottom: 20px;
-            overflow-wrap: break-word;
         }
     }
     &__image {
@@ -79,20 +71,11 @@
         }
     }
     &__tecnologies {
+        display: flex;
+        align-items: center;
+        gap: 0;
+        flex-wrap: wrap;
         margin-bottom: 15px;
-        
-        .slider-track {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 16px;
-            animation: none; // No animation on desktop
-
-            // Since both projects have 4 technologies, we hide the duplicated ones on desktop.
-            // Duplicates start from the 5th child.
-            app-button:nth-child(n + 5) {
-                display: none;
-            }
-        }
     }
 
     &__tecnologies-icons {
@@ -141,29 +124,6 @@
         }
         .projects__description-text {
             font-size: 0.9rem;
-        }
-        &__tecnologies {
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-          -webkit-mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
-          mask-image: linear-gradient(to right, transparent, white 10%, white 90%, transparent);
-          
-          .slider-track {
-            display: flex;
-            flex-wrap: nowrap;
-            gap: 16px;
-            width: max-content;
-            animation: scroll 40s linear infinite;
-
-            app-button {
-              display: block; // Show all buttons for the slider
-            }
-          }
-
-          &:hover .slider-track {
-            animation-play-state: paused;
-          }
         }
     }
     @media (max-width: 480px) {
@@ -225,7 +185,6 @@ app-button ::ng-deep button {
   font-size: 0.9rem;
   transition: background 0.2s, color 0.2s, border 0.2s;
   box-shadow: 0 2px 8px 0 rgba(30,41,59,0.08);
-  white-space: nowrap; // Prevent button text from wrapping
 }
 
 app-button ::ng-deep button:hover {
@@ -240,16 +199,7 @@ app-button ::ng-deep button:hover {
 }
 
 .profile__socials__icon {
-  margin-left: 21px;
+  margin-left: 20px;
   display: flex;
   align-items: center;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
 }

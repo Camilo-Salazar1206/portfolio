@@ -17,21 +17,12 @@
     </h2>
 
     <div class="projects__tecnologies">
-      <div class="slider-track">
-        <ng-container *ngFor="let tech of tecnologias">
-          <app-button
-            [textButton]="tech"
-            [url]="getDocumentationUrl(tech)">
-          </app-button>
-        </ng-container>
-        <!-- Duplicamos para el efecto infinito -->
-        <ng-container *ngFor="let tech of tecnologias">
-          <app-button
-            [textButton]="tech"
-            [url]="getDocumentationUrl(tech)">
-          </app-button>
-        </ng-container>
-      </div>
+      <ng-container *ngFor="let tech of tecnologias">
+        <app-button
+          [textButton]="tech"
+          [url]="getDocumentationUrl(tech)">
+        </app-button>
+      </ng-container>
       <div class="projects__tecnologies-icons">
         <!-- <a *ngIf="githubUrlFrontend"
            class="profile__socials__icon"
