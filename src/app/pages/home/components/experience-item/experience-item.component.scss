@@ -1,3 +1,25 @@
 .experiences > div {
   margin-bottom: 8px;
 }
+
+.experiences__title h2 {
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.experiences__description h3 {
+  color: #60a5fa;
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+}
+
+.experiences__title-company h3 {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.experiences__description p {
+  color: #e0e0e0;
+  margin-bottom: 0;
+}

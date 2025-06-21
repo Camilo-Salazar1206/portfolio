@@ -45,7 +45,11 @@ export enum SkillsStack {
   Jetpack = 'Jetpack Compose',
   React = 'React',
   reactNative = 'React Native',
-  Docker="Docker"
+  Docker = 'Docker',
+  Webflow = 'Webflow',
+  Wized = 'Wized',
+  Xano = 'Xano',
+  Supabase = 'Supabase',
 }
 
 export enum iconDirection {
@@ -67,8 +71,13 @@ export enum iconDirection {
   Kotlin = 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/1200px-Kotlin_Icon.png',
   jetpack = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjC97Z8BResg5dlPqczsRCFhP6zewWX0X0e7fVPG-G7PuUZwwZVsi9OPoqJYkgqT2h0FI95SsmWzVEgpt8b8HAqFiIxZ98TFtY4lE0b8UrtVJ2HrJebRwl6C9DslsQDl9KnBIrdHS6LtkY/s1600/jetpack+compose+icon_RGB.png',
   reactNative = 'https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png',
-  Docker="https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png"
+  Docker = 'https://cdn4.iconfinder.com/data/icons/logos-and-brands/512/97_Docker_logo_logos-512.png',
+  Webflow = 'https://cdn.prod.website-files.com/5f15081919fdf673994ab5fd/651f24a499bc8356ba844e0c_Webflow-Logo.svg',
+  Wized = 'https://cdn.prod.website-files.com/638f7017f8f3b49d78e071a0/672b9232c98210d4e69a8d2e_373e7161-a887-4ee0-aa23-7b1e9a770964.png',
+  Xano = 'https://cdn.prod.website-files.com/623eb8d0018a46199221f5d4/64ede7e168221eb4ddaa1f1b_3hParOsO7AtJAUD3z8S44TmjuICWDvfgrBTY_lm65Lk.png',
+  Supabase = 'https://img.icons8.com/color/512/supabase.png',
 }
+
 export enum documentationDirection {
   Angular = 'https://angular.io/docs',
   Html = 'https://developer.mozilla.org/en-US/docs/Web/HTML',
@@ -88,8 +97,12 @@ export enum documentationDirection {
   Kotlin = 'https://kotlinlang.org/docs/home.html',
   Jetpack = 'https://developer.android.com/jetpack/compose/documentation',
   reactNative = 'https://reactnative.dev/docs/getting-started',
-  React="https://react.dev/learn/build-a-react-app-from-scratch",
-  Docker="https://docs.docker.com/"
+  React = 'https://react.dev/learn/build-a-react-app-from-scratch',
+  Docker = 'https://docs.docker.com/',
+  Webflow = 'https://university.webflow.com/',
+  Wized = 'https://docs.wized.com/',
+  Xano = 'https://docs.xano.com/',
+  Supabase = 'https://supabase.com/docs',
 }
 
 export enum TitleProyect {
@@ -101,6 +114,7 @@ export enum DescriptionProyect {
 }
 export enum ImgUrlProyect {
   ImgRutasParaMoteros = 'https://i.imgur.com/KFu0l3Z.png',
+  ImgEquirent = 'https://i.imgur.com/9JHClnD.png',
 }
 
 export enum UrlProyects {
@@ -118,29 +132,28 @@ export enum urlButtons {
 }
 
 export enum JobTitle {
-  FRONTEND_DEVELOPER = 'Frontend Developer',
+  FRONTEND_DEVELOPER = 'Desarrollador Frontend',
+  FULL_STACK_DEVELOPER = 'Desarrollador Full Stack',
 }
 
 export enum JobTecnologies{
-  FRONTEND_DEVELOPER_PRAGMA="Angular / TypeScript / Jasmine / SCSS"
+  FRONTEND_DEVELOPER_PRAGMA="Angular / TypeScript / Jasmine / SCSS",
+  FULL_STACK_DEVELOPER_TINGE="WebFlow / Wized / Supabase / Xano / Lovable / React / TypeScript / JavaScript"
 }
 export enum JobCompany {
   PRAGMA = 'PRAGMA',
+  TINGE_STUDIO = 'Tinge Studio',
 }
 
 export enum JobDescription {
-  FRONTEND_DEVELOPER = `Entre abril y octubre de 2024, desempeñé el rol de Frontend Developer, participando activamente en el diseño y desarrollo de interfaces web modernas utilizando Angular y TypeScript.
-Implementé diseños responsivos basados en buenas prácticas de UX/UI, integré servicios RESTful mediante HTTPClient, y optimicé el rendimiento de las aplicaciones.
-
-Utilicé Jasmine y Karma para realizar pruebas unitarias, asegurando la estabilidad del código.
-Además, colaboré estrechamente con diseñadores UX/UI, gestioné el control de versiones con Git y seguí metodologías ágiles como Scrum mediante reuniones diarias, planificación de sprints y revisiones continuas del producto.
-
-Me enfoqué en escribir código limpio, reutilizable y mantenible, garantizando la calidad y escalabilidad de los proyectos.`
+  FRONTEND_DEVELOPER = `Participé en el desarrollo de interfaces web modernas con Angular y TypeScript, aplicando buenas prácticas de UX/UI y realizando integraciones con servicios RESTful. Realicé pruebas unitarias con Jasmine y Karma, colaboré con equipos de diseño y seguí metodologías ágiles para asegurar la calidad y escalabilidad de los proyectos.`,
+  FULL_STACK_DEVELOPER = `Me encargo de la maquetación de sitios utilizando Webflow, integrando directamente funcionalidades avanzadas mediante Wized. Desarrollo interfaces dinámicas con JavaScript, TypeScript y React, y gestiono la autenticación y el almacenamiento de datos a través de Supabase. También integro APIs externas y conecto diversas plataformas para optimizar la conectividad, escalabilidad y experiencia del usuario en cada proyecto.`
 }
 
 
 export enum JobDateExperience {
-  DATE_PRAGMA = 'Abril 2024 - Octubre 2024',
+  DATE_PRAGMA = '- Abril 2024 / Octubre 2024',
+  DATE_TINGE_STUDIO = '- Actualidad',
 }
 
 export enum NumbersEnum {
@@ -151,3 +164,8 @@ export enum NumbersEnum {
 
 
 }
+
+const JobTechnologiesMapping = {
+  FRONTEND_DEVELOPER: JobTecnologies.FRONTEND_DEVELOPER_PRAGMA,
+  FULL_STACK_DEVELOPER: JobTecnologies.FULL_STACK_DEVELOPER_TINGE,
+};

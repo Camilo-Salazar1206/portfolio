@@ -6,9 +6,13 @@
     box-sizing: border-box;
 }
 
-body {
+html {
     Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
     background: linear-gradient(to right, #0a0f2c, #1e3a8a, #3b82f6);
+}
+
+body {
+    Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
 }
 
 ::-webkit-scrollbar {

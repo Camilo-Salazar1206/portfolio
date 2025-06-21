@@ -18,6 +18,9 @@ export class ProyectItemComponent {
   @Input() backTecnologie: string = '';
   @Input() mobileTecnologie:string='';
   @Input() dataBaseTecnologie: string = '';
+  @Input() tecnologias: string[] = [];
+  @Input() githubUrlFrontend?: string;
+  @Input() githubUrlBackend?: string;
 
   githubUrls = GithubUrlProyects;
 

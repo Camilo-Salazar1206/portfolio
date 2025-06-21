@@ -8,10 +8,9 @@
               [proyectDescription]="proyecto.description"
               [proyectImgUrl]="proyecto.imgUrl"
               [proyectUrl]="proyecto.url"
-              [frontTecnologie]="proyecto.frontTecnologie ?? ''"
-              [backTecnologie]="proyecto.backTecnologie ?? ''"
-              [dataBaseTecnologie]="proyecto.dataBaseTecnologie ?? ''"
-              [mobileTecnologie]="proyecto.mobileTecnologie ?? '' ">
+              [tecnologias]="proyecto.tecnologias || []"
+              [githubUrlFrontend]="proyecto.githubUrlFrontend"
+              [githubUrlBackend]="proyecto.githubUrlBackend">
           </app-proyect-item>
       </div>
   </div>

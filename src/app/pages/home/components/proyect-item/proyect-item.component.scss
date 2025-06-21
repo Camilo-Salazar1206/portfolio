@@ -2,22 +2,23 @@
     margin-top: 10px;
     padding: 3%;
     width: 100%;
-    background-color: black;
+    background-color: transparent;
     backdrop-filter: blur(10px);
     border-radius: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     max-width: 90%;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     &__content {
         display: flex;
         flex-direction: row;
         color: white;
         align-items: center;
-        gap: 10px;
-        flex-wrap: wrap;
+        gap: 40px;
+        flex-wrap: nowrap;
         &>div {
             text-align: start;
-            flex: 1 1 48%;
+            flex: 1 1 50%;
             padding: 10px;
             border-radius: 8px;
         }
@@ -25,6 +26,7 @@
     &__image {
       position: relative;
       overflow: hidden;
+      flex-shrink: 0;
 
       img {
         width: 100%;
@@ -36,7 +38,7 @@
     }
 
     img:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6;
     }
 
@@ -52,8 +54,9 @@
       h2 {
         font-size: 1.8rem;
         color: #3b82f6;
-        margin-bottom: 2%;
+        margin-bottom: 16px;
         transition: text-shadow 0.3s ease;
+        cursor: pointer;
 
         &:hover {
           color: white;
@@ -62,54 +65,50 @@
 
         .projects__description-text {
             font-size: 1rem;
-            line-height: 2.0rem;
-            color: #ffffff;
-            margin-bottom: 15px;
+            line-height: 1.6rem;
+            color: #e2e8f0;
+            margin-bottom: 20px;
         }
     }
     &__tecnologies {
-        width: 100%;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
-        gap: 18px;
+        gap: 0;
         flex-wrap: wrap;
+        margin-bottom: 15px;
     }
 
-    &_git {
-      display: flex;
-      margin-bottom: 2%;
-      gap: 8px;
-      align-items: center;
+    &__tecnologies-icons {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        margin-left: auto;
 
-      a {
-        width: 35px;
-        height: 32px;
-        border-radius: 100%;
-        cursor: pointer;
-        display: inline-block;
-        transition: box-shadow 0.3s ease;
+        .profile__socials__icon {
+            display: inline-block;
+            transition: transform 0.3s ease, filter 0.3s ease;
 
-        &:hover {
-          box-shadow: 0 0 10px 2px #3b82f6;
-          border-radius: 100%;
+            img {
+                width: 32px;
+                height: 32px;
+                filter: grayscale(80%);
+                transition: filter 0.3s ease;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+                img {
+                    filter: grayscale(0%);
+                }
+            }
         }
-
-        img {
-
-          transition: transform 0.3s ease;
-
-          &:hover {
-            transform: scale(1.1);
-          }
-        }
-      }
     }
 
     @media (max-width: 1024px) {
         &__content {
             flex-direction: column;
             gap: 20px;
+            flex-wrap: wrap;
         }
         &__description h2 {
             font-size: 1.5rem;
@@ -163,4 +162,44 @@
             gap: 6px;
         }
     }
+}
+
+.projects__tecnologies {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.projects__tecnologies app-button {
+  margin: 0;
+}
+
+app-button ::ng-deep button {
+  background: #172554;
+  color: #fff;
+  border: 1.5px solid #60a5fa;
+  border-radius: 18px;
+  padding: 6px 18px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  box-shadow: 0 2px 8px 0 rgba(30,41,59,0.08);
+}
+
+app-button ::ng-deep button:hover {
+  background: #2563eb;
+  color: #fff;
+  border-color: #2563eb;
+  z-index: 1;
+}
+
+:host ::ng-deep app-button:not(:first-child) button {
+  margin-left: -1.5px;
+}
+
+.profile__socials__icon {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
 }

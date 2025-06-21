@@ -17,62 +17,28 @@
     </h2>
 
     <div class="projects__tecnologies">
-      <app-button
-        *ngIf="frontTecnologie"
-        [textButton]="frontTecnologie"
-        [url]="getDocumentationUrl(frontTecnologie)"
-      >
-      </app-button>
-
-      <app-button
-        *ngIf="backTecnologie"
-        [textButton]="backTecnologie"
-        [url]="getDocumentationUrl(backTecnologie)"
-      >
-      </app-button>
-
-      <app-button
-        *ngIf="dataBaseTecnologie"
-        [textButton]="dataBaseTecnologie"
-        [url]="getDocumentationUrl(dataBaseTecnologie)"
-      >
-      </app-button>
-      <app-button
-      *ngIf="mobileTecnologie"
-      [textButton]="mobileTecnologie"
-      [url]="getDocumentationUrl(mobileTecnologie)"
-    >
-    </app-button>
-
-    <div class="projects_git" *ngIf="backTecnologie || frontTecnologie || mobileTecnologie">
-      <a *ngIf="backTecnologie && getGithubUrl('Backend')"
-         class="profile__socials__icon"
-         title="Repositorio Backend"
-         (click)="openGitHub(getGithubUrl('Backend'))">
-        <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"
-             alt="GitHub Backend"
-             style="width: 35px; height: 32px" />
-      </a>
-
-      <a *ngIf="frontTecnologie && getGithubUrl('Frontend')"
-         class="profile__socials__icon"
-         title="Repositorio Frontend"
-         (click)="openGitHub(getGithubUrl('Frontend'))">
-        <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"
-             alt="GitHub Frontend"
-             style="width: 35px; height: 32px" />
-      </a>
-
-      <a *ngIf="mobileTecnologie && getGithubUrl('Mobile')"
-         class="profile__socials__icon"
-         title="Repositorio Mobile"
-         (click)="openGitHub(getGithubUrl('Mobile'))">
-        <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"
-             alt="GitHub Mobile"
-             style="width: 35px; height: 32px" />
-      </a>
-    </div>
-
+      <ng-container *ngFor="let tech of tecnologias">
+        <app-button
+          [textButton]="tech"
+          [url]="getDocumentationUrl(tech)">
+        </app-button>
+      </ng-container>
+      <div class="projects__tecnologies-icons">
+        <!-- <a *ngIf="githubUrlFrontend"
+           class="profile__socials__icon"
+           title="Repositorio Frontend"
+           [href]="githubUrlFrontend" target="_blank">
+          <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"
+               alt="GitHub Frontend" />
+        </a>
+        <a *ngIf="githubUrlBackend"
+           class="profile__socials__icon"
+           title="Repositorio Backend"
+           [href]="githubUrlBackend" target="_blank">
+          <img src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"
+               alt="GitHub Backend" />
+        </a> -->
+      </div>
     </div>
 
     <p class="projects__description-text">

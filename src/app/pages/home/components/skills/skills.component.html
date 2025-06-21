@@ -115,6 +115,22 @@
           [style.animation-delay]="getRandomDelay() + 's'"
           [urlDocumentation]="documentationDirections.MySQL"
         ></app-skill-percentage>
+        <app-skill-percentage
+        class="skills__item"
+        [ngClass]="{ animate: !isScrolling }"
+        [skill]="TechnologyStack.Supabase"
+        [iconSkill]="iconDirections.Supabase"
+        [style.animation-delay]="getRandomDelay() + 's'"
+        [urlDocumentation]="documentationDirections.Supabase"
+      ></app-skill-percentage>
+      <app-skill-percentage
+      class="skills__item"
+      [ngClass]="{ animate: !isScrolling }"
+      [skill]="TechnologyStack.Xano"
+      [iconSkill]="iconDirections.Xano"
+      [style.animation-delay]="getRandomDelay() + 's'"
+      [urlDocumentation]="documentationDirections.Xano"
+    ></app-skill-percentage>
       </div>
     </div>
 
@@ -141,15 +157,6 @@
         >
         </app-skill-percentage>
 
-        <app-skill-percentage
-          class="skills__item"
-          [ngClass]="{ animate: !isScrolling }"
-          [skill]="TechnologyStack.Aws"
-          [iconSkill]="iconDirections.Aws"
-          [style.animation-delay]="getRandomDelay() + 's'"
-          [urlDocumentation]="documentationDirections.Aws"
-        >
-        </app-skill-percentage>
 
         <app-skill-percentage
           class="skills__item"
@@ -160,6 +167,24 @@
           [urlDocumentation]="documentationDirections.Docker"
         >
         </app-skill-percentage>
+        <app-skill-percentage
+        class="skills__item"
+        [ngClass]="{ animate: !isScrolling }"
+        [skill]="TechnologyStack.Webflow"
+        [iconSkill]="iconDirections.Webflow"
+        [style.animation-delay]="getRandomDelay() + 's'"
+        [urlDocumentation]="documentationDirections.Webflow"
+      >
+      </app-skill-percentage>
+      <app-skill-percentage
+      class="skills__item"
+      [ngClass]="{ animate: !isScrolling }"
+      [skill]="TechnologyStack.Wized"
+      [iconSkill]="iconDirections.Wized"
+      [style.animation-delay]="getRandomDelay() + 's'"
+      [urlDocumentation]="documentationDirections.Wized"
+    >
+    </app-skill-percentage>
       </div>
     </div>
   </div>
@@ -186,6 +211,16 @@
           [iconSkill]="iconDirections.Kotlin"
           [style.animation-delay]="getRandomDelay() + 's'"
           [urlDocumentation]="documentationDirections.Kotlin"
+        >
+        </app-skill-percentage>
+        
+        <app-skill-percentage
+          class="skills__item"
+          [ngClass]="{ animate: !isScrolling }"
+          [skill]="TechnologyStack.Aws"
+          [iconSkill]="iconDirections.Aws"
+          [style.animation-delay]="getRandomDelay() + 's'"
+          [urlDocumentation]="documentationDirections.Aws"
         >
         </app-skill-percentage>
       </div>

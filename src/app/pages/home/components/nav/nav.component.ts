@@ -24,7 +24,7 @@ export class NavComponent {
 
   @HostListener('document:click', ['$event'])
   closeMenuOnClickOutside(event: MouseEvent) {
-    const menu = document.querySelector('.navbar__side-menu');
+    const menu = document.querySelector('.side-menu');
     const toggleButton = document.querySelector('.navbar__toggle');
     const clickedInsideMenu = menu?.contains(event.target as Node);
     const clickedInsideToggle = toggleButton?.contains(event.target as Node);
@@ -36,7 +36,7 @@ export class NavComponent {
 
   @HostListener('document:touchstart', ['$event'])
   onTouchStart(event: TouchEvent) {
-    const menu = document.querySelector('.navbar__side-menu');
+    const menu = document.querySelector('.side-menu');
     if (menu && menu.contains(event.target as Node)) {
       this.startX = event.touches[0].clientX;
     }
@@ -44,7 +44,7 @@ export class NavComponent {
 
   @HostListener('document:touchend', ['$event'])
   onTouchEnd(event: TouchEvent) {
-    const menu = document.querySelector('.navbar__side-menu');
+    const menu = document.querySelector('.side-menu');
     const endX = event.changedTouches[0].clientX;
 
     if (this.startX - endX > this.numbers.TouchMoveThreshold && this.isMenuOpen) {

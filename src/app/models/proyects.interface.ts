@@ -6,8 +6,6 @@ export interface IFProyect {
   url: string;
   githubUrlBackend?: string;
   githubUrlFrontend?: string;
-  frontTecnologie?: string;
-  backTecnologie?: string;
-  mobileTecnologie?:string;
-  dataBaseTecnologie?: string;
+  tecnologias?: string[];
+  estado: string;
 }
