@@ -1,0 +1,84 @@
+{
+    "name_app": "Portfolio Camilo",
+    "name": "- Camilo Salazar -",
+    "name_icon": "Camilo Salazar",
+    "role": "Junior Developer / Full Stack / +1 year of experience",
+    "rigths": "© Camilo Salazar. Almost all rights reserved.",
+    "about_me_title": "About me",
+    "about_me_titles": {
+        "full_name": "Full name: ",
+        "phone": "Phone: ",
+        "email": "Email: ",
+        "city": "City: "
+    },
+    "about_me_details": {
+        "full_name": "Camilo Estevan Tacue Salazar",
+        "phone": "(+57) 3023534006",
+        "email": "c4m1loo12@gmail.com",
+        "city": "Popayán, Colombia"
+    },
+    "my_description_title": "</Hello, I'm Camilo>",
+    "my_description": "👨‍💻 I'm a developer specialized in frontend with Angular and TypeScript, and also in backend with Java and Spring Boot. I focus on implementing clean and scalable architectures that facilitate software maintenance and evolution. 🤝 I work collaboratively under the SCRUM methodology, promoting effective communication within the team. 💻 With dedication and passion for development, I seek to deliver high-quality solutions that improve user experience and meet business needs.",
+    "available_to_work": "Available to work",
+    "tecnologies": "Technologies",
+    "working_experience": "Work experience",
+    "proyects": "Projects",
+    "contact_me": "You can also find me on:",
+    "contact_me_text": "Do you have a project in mind? Write to me.",
+    "contact_me_title": "Do you have a project in mind? Write to me.",
+    "contact_me_subtitle": "You can also find me on:",
+    "copy_email": "Email copied to clipboard",
+    "linkedin": "LinkedIn",
+    "skills": {
+        "Tecnologies": "Technologies",
+        "frontend": "Frontend",
+        "backend": "Backend",
+        "database": "Database",
+        "tools": "Tools",
+        "learning_skills": "Technological skills in development and improvement"
+    },
+    "navigation": {
+        "home": "Home",
+        "about_me": "About me",
+        "skills": "Skills",
+        "experience": "Experience",
+        "proyects": "Projects",
+        "contact": "Contact"
+    },
+    "jobs": {
+        "titles": {
+            "frontend_developer": "Development Apprentice / Frontend",
+            "full_stack_developer": "Full Stack Developer"
+        },
+        "companies": {
+            "pragma": "PRAGMA",
+            "tinge_studio": "Tinge Studio"
+        },
+        "technologies": {
+            "frontend_developer_pragma": "Angular / TypeScript / Jasmine / SCSS",
+            "full_stack_developer_tinge": "WebFlow / Wized / Supabase / Xano / Lovable / React / TypeScript / JavaScript"
+        },
+        "descriptions": {
+            "frontend_developer": "I participated in the development of modern web interfaces with Angular and TypeScript, applying good UX/UI practices and performing integrations with RESTful services. I performed unit testing with Jasmine and Karma, collaborated with design teams and followed agile methodologies to ensure the quality and scalability of projects.",
+            "full_stack_developer": "I handle site layout using Webflow, directly integrating advanced functionalities through Wized. I develop dynamic interfaces with JavaScript, TypeScript and React, and manage authentication and data storage through Supabase. I also integrate external APIs and connect various platforms to optimize connectivity, scalability and user experience in each project."
+        },
+        "dates": {
+            "pragma": "- April 2024 / October 2024",
+            "tinge_studio": "- Present"
+        }
+    },
+    "projects": {
+        "titles": {
+            "rutas_para_moteros": "RPM - Routes For Bikers",
+            "equirent": "Equirent"
+        },
+        "descriptions": {
+            "rutas_para_moteros": "Web-mobile application developed during my training at SENA, oriented to motorcycle travelers in Colombia. As a mobile developer, I worked on implementing custom routes, image uploading with Firebase, JWT authentication and REST API consumption. The app promotes responsible motorcycle tourism, allowing users to trace, share and rate routes.",
+            "equirent": "Web platform that transforms urban mobility in Colombia through vehicle rental by hours, days or long term, and the sale of semi-new vehicles. I handle system maintenance, integration of new functionalities, API connection, authentication and administrative modules. The solution eliminates financial barriers by offering access without down payment, fixed costs that include maintenance and insurance, and promotes flexible, sustainable mobility with positive social impact."
+        },
+        "status": {
+            "in_development": "In development",
+            "in_production": "In production"
+        }
+    }
+}

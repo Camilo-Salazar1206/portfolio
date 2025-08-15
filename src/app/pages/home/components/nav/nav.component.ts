@@ -1,24 +1,57 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 import { ViewportScroller } from '@angular/common';
-import { NumbersEnum, RoutesEnum, RouteTranslations } from 'src/app/core/enums/routes.enums';
+import { NumbersEnum, RoutesEnum } from 'src/app/core/enums/routes.enums';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })
-export class NavComponent {
+export class NavComponent implements OnInit, OnDestroy {
   routes = RoutesEnum;
   numbers = NumbersEnum;
-  private routeTranslations = RouteTranslations;
-  isScrolled: boolean = false;
-  isMenuOpen: boolean = false;
+  routeValues: { id: string, translation: string }[] = [];
+  isScrolled = false;
+  isMenuOpen = false;
   startX: number = 0;
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  private subscription: Subscription = new Subscription();
 
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll() {
+  constructor(
+    private viewportScroller: ViewportScroller,
+    private translate: TranslateService
+  ) {}
+
+  ngOnInit() {
+    this.loadRoutes();
+    
+    // Subscribe to language changes
+    this.subscription = this.translate.onLangChange.subscribe(() => {
+      this.loadRoutes();
+    });
+
+    // Scroll event listener
+    window.addEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+    window.removeEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  private loadRoutes() {
+    const routeKeys = Object.values(RoutesEnum);
+    const translationKeys = routeKeys.map(route => `navigation.${route.toLowerCase()}`);
+    
+    this.routeValues = routeKeys.map((route, index) => ({
+      id: route,
+      translation: this.translate.instant(translationKeys[index])
+    }));
+  }
+
+  onScroll() {
     this.isScrolled = window.scrollY > this.numbers.ScrollThreshold;
   }
 
@@ -51,16 +84,6 @@ export class NavComponent {
       this.isMenuOpen = false;
     }
   }
-
-  translateRoute(route: keyof typeof RoutesEnum): string {
-    return this.routeTranslations[route] || route;
-  }
-
-  routeValues = Object.keys(this.routes).map(route => ({
-    key: route as keyof typeof RoutesEnum,
-    translation: this.translateRoute(route as keyof typeof RoutesEnum),
-    id: this.routes[route as keyof typeof RoutesEnum]
-  }));
 
   scrollToElement(event: Event, elementId: string): void {
     event.preventDefault();

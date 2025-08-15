@@ -1,0 +1,26 @@
+<div class="initial-loader" [@containerFade]="containerState" *ngIf="containerState === 'visible'">
+  <div class="initial-loader__content">
+    <!-- Welcome text -->
+    <div class="initial-loader__text" 
+         [@textAnimation]="animationState" 
+         *ngIf="showWelcome">
+      <span class="welcome-text">Welcome to</span>
+      <span class="name-highlight">Camilo Salazar</span>
+      <span class="portfolio-text">Portfolio</span>
+    </div>
+    
+    <!-- Name only -->
+    <div class="initial-loader__name" 
+         [@textAnimation]="animationState" 
+         *ngIf="showName">
+      <span class="name-solo">Camilo Salazar</span>
+    </div>
+  </div>
+  
+  <!-- Loading dots animation -->
+  <div class="loading-dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</div>

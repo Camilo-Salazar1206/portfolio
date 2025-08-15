@@ -1,25 +1,39 @@
-<nav class="navbar" [ngClass]="{'scrolled': isScrolled}">
-    <a class="navbar__logo" (click)="scrollToElement($event, routes.Home)">
-        {{"name_icon" | translate}}
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="navbar__logo">
+    <a href="#start" (click)="scrollToElement($event, 'start')">
+      <span class="navbar__logo-text">Camilo Salazar</span>
     </a>
-
-    <div class="navbar__toggle" (click)="toggleMenu()" [class.active]="isMenuOpen">
-        <span class="navbar__toggle-line"></span>
-        <span class="navbar__toggle-line"></span>
-        <span class="navbar__toggle-line"></span>
-    </div>
-
-    <div class="navbar__links">
-        <a *ngFor="let route of routeValues" class="navbar__links-item" [href]="'#' + route.id" (click)="scrollToElement($event, route.id)">
-            {{ route.translation }}
+  </div>
+  
+  <div class="navbar__menu">
+    <ul class="navbar__nav">
+      <li class="navbar__item" *ngFor="let route of routeValues">
+        <a class="navbar__link" 
+           [href]="'#' + route.id" 
+           (click)="scrollToElement($event, route.id)">
+          {{ route.translation }}
         </a>
-    </div>
-</nav>
+      </li>
+    </ul>
+  </div>
 
-<div class="side-menu" [class.open]="isMenuOpen">
-    <a *ngFor="let route of routeValues" class="side-menu__link" [href]="'#' + route.id" (click)="scrollToElement($event, route.id)">
-        {{ route.translation }}
-    </a>
-</div>
+  <button class="navbar__toggle" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div class="side-menu" [class.open]="isMenuOpen">
+    <ul class="side-menu__nav">
+      <li class="side-menu__item" *ngFor="let route of routeValues">
+        <a class="side-menu__link" 
+           [href]="'#' + route.id" 
+           (click)="scrollToElement($event, route.id)">
+          {{ route.translation }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
 <div class="overlay" [class.show]="isMenuOpen" (click)="toggleMenu()"></div>

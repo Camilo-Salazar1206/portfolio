@@ -18,7 +18,7 @@ export class ContactMeComponent {
         this.emailCopied = false;
       }, 2000);
     }).catch(err => {
-      console.error('Error al copiar el correo: ', err);
+      console.error('Error copying email: ', err);
     });
   }
 

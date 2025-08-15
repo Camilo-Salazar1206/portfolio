@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import './assets/styles/colors';
+@import './assets/styles/utilities';
 
 * {
     margin: 0;
@@ -7,12 +9,17 @@
 }
 
 html {
-    Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    background: linear-gradient(to right, #0a0f2c, #1e3a8a, #3b82f6);
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background: $bg-primary;
+    color: $text-primary;
 }
 
 body {
-    Font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+    background: linear-gradient(180deg, $primary-dark 0%, $secondary-dark 100%);
+    background-attachment: fixed;
+    color: $text-primary;
+    min-height: 100vh;
 }
 
 ::-webkit-scrollbar {
@@ -21,10 +28,14 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #3b82f6;
+    background-color: $primary-dark;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #0a0f2c;
+    background-color: $primary-base;
     border-radius: 20px;
+    
+    &:hover {
+        background-color: $hover-primary;
+    }
 }

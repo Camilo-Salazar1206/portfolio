@@ -1,11 +1,20 @@
+@import '../../../../assets/styles/colors';
+
 .button-container {
   width: auto;
   padding: 6px;
   border-radius: 10px;
   margin-bottom: 10px;
-  border: solid white 1px;
+  border: 2px solid $border-primary;
   position: relative;
   cursor: pointer;
+  background: linear-gradient(45deg, transparent, rgba($primary-base, 0.1));
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $accent-glow;
+    box-shadow: $shadow-glow;
+  }
 
   &::before,
   &::after {
@@ -13,8 +22,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 1px;
-    background-color: white;
+    width: 2px;
+    background: linear-gradient(180deg, $primary-base, $accent-glow);
   }
 
   &::before {
@@ -29,23 +38,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 6px;
+    padding: 12px 20px;
     border-radius: 5px;
     width: auto;
     font-weight: bold;
     font-size: 1.0rem;
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    background-color: #0a0f2c;
-    color: white;
+    background: linear-gradient(135deg, $primary-dark, $secondary-dark);
+    color: $text-primary;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba($accent-glow, 0.3), transparent);
+      transition: left 0.5s ease;
+    }
 
     &:hover {
-      background-color: white;
-      color: #0a0f2c;
-      text-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6, 0 0 30px #3b82f6;
-      box-shadow: 0 0 10px #3b82f6, 0 0 20px #3b82f6;
+      background: linear-gradient(135deg, $primary-base, $secondary-base);
+      color: $text-primary;
+      text-shadow: 0 0 10px $accent-glow, 0 0 20px $accent-glow;
+      box-shadow: $shadow-glow, inset 0 0 20px rgba($accent-glow, 0.2);
+      transform: translateY(-2px);
+
+      &::before {
+        left: 100%;
+      }
+    }
+
+    &:active {
+      transform: translateY(0);
     }
 
     a {
@@ -54,7 +85,7 @@
       transition: color 0.3s ease;
 
       &:hover {
-        color: #1a1624;
+        color: $text-primary;
       }
     }
   }

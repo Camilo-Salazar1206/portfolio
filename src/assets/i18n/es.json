@@ -2,7 +2,7 @@
     "name_app": "Portfolio Camilo",
     "name": "- Camilo Salazar -",
     "name_icon": "Camilo Salazar",
-    "role": "Desarrollador Junior / Frontend / Backend /+1 año de experiencia",
+    "role": "Desarrollador Junior / Full Stack /+1 año de experiencia",
     "rigths": "© Camilo Salazar. Casi todos los derechos reservados.",
     "about_me_title": "Sobre mí",
     "about_me_titles": {
@@ -25,6 +25,8 @@
     "proyects": "Proyectos",
     "contact_me": "También me puedes encontrar en:",
     "contact_me_text": "¿Tienes un proyecto en mente? Escríbeme.",
+    "contact_me_title": "¿Tienes un proyecto en mente? Escríbeme.",
+    "contact_me_subtitle": "También me puedes encontrar en:",
     "copy_email":"Correo electrónico copiado al portapapeles",
     "linkedin": "LinkedIn",
     "skills": {
@@ -34,5 +36,49 @@
         "database": "Base de Datos",
         "tools": "Herramientas",
         "learning_skills": "Competencias tecnológicas en desarrollo y perfeccionamiento"
+    },
+    "navigation": {
+        "home": "Inicio",
+        "about_me": "Acerca de mí",
+        "skills": "Habilidades",
+        "experience": "Experiencia",
+        "proyects": "Proyectos",
+        "contact": "Contacto"
+    },
+    "jobs": {
+        "titles": {
+            "frontend_developer": "Aprendiz de desarrollo / Frontend",
+            "full_stack_developer": "Desarrollador Full Stack"
+        },
+        "companies": {
+            "pragma": "PRAGMA",
+            "tinge_studio": "Tinge Studio"
+        },
+        "technologies": {
+            "frontend_developer_pragma": "Angular / TypeScript / Jasmine / SCSS",
+            "full_stack_developer_tinge": "WebFlow / Wized / Supabase / Xano / Lovable / React / TypeScript / JavaScript"
+        },
+        "descriptions": {
+            "frontend_developer": "Participé en el desarrollo de interfaces web modernas con Angular y TypeScript, aplicando buenas prácticas de UX/UI y realizando integraciones con servicios RESTful. Realicé pruebas unitarias con Jasmine y Karma, colaboré con equipos de diseño y seguí metodologías ágiles para asegurar la calidad y escalabilidad de los proyectos.",
+            "full_stack_developer": "Me encargo de la maquetación de sitios utilizando Webflow, integrando directamente funcionalidades avanzadas mediante Wized. Desarrollo interfaces dinámicas con JavaScript, TypeScript y React, y gestiono la autenticación y el almacenamiento de datos a través de Supabase. También integro APIs externas y conecto diversas plataformas para optimizar la conectividad, escalabilidad y experiencia del usuario en cada proyecto."
+        },
+        "dates": {
+            "pragma": "- Abril 2024 / Octubre 2024",
+            "tinge_studio": "- Actualidad"
+        }
+    },
+    "projects": {
+        "titles": {
+            "rutas_para_moteros": "RPM - Rutas Para Moteros",
+            "equirent": "Equirent"
+        },
+        "descriptions": {
+            "rutas_para_moteros": "Aplicación web-móvil desarrollada durante mi formación en el SENA, orientada a motoviajeros en Colombia. Como desarrollador móvil, trabajé en la implementación de rutas personalizadas, carga de imágenes con Firebase, autenticación con JWT y consumo de API REST. La app promueve el moto-turismo responsable, permitiendo a usuarios trazar, compartir y calificar rutas.",
+            "equirent": "Plataforma web que transforma la movilidad urbana en Colombia mediante el alquiler de vehículos por horas, días o a largo plazo, y la venta de seminuevos. Me encargo del mantenimiento del sistema, integración de nuevas funcionalidades, conexión con APIs, autenticación y módulos administrativos.La solución elimina barreras financieras al ofrecer acceso sin cuota inicial, costos fijos que incluyen mantenimiento y seguros, y promueve una movilidad flexible, sostenible y con impacto social positivo."
+        },
+        "status": {
+            "in_development": "En desarrollo",
+            "in_production": "En producción"
+        }
     }
 }

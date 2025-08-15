@@ -1,0 +1,65 @@
+// ============================================
+// COLOR PALETTE - Blue Theme
+// ============================================
+
+// Primary Colors - Blue Gradient
+$primary-dark: #140f07;        // Very dark brown
+$primary-base: #31aeff;        // Bright blue
+$primary-light: #4ffeff;       // Light cyan
+$primary-lighter: #4ffeff;     // Cyan
+
+// Secondary Colors - Blue Tones
+$secondary-dark: #10283e;      // Dark blue
+$secondary-base: #19669e;      // Medium blue
+$secondary-light: #31aeff;     // Bright blue
+$secondary-lighter: #4ffeff;   // Cyan
+
+// Accent Colors
+$accent-primary: #4ffeff;      // Cyan
+$accent-secondary: #31aeff;    // Bright blue
+$accent-glow: #4ffeff;         // Cyan glow
+
+// Global Border Radius
+$border-radius: 15px;
+$accent-dark: #19669e;         // Medium blue
+
+// Neutral Colors
+$neutral-black: #0d0d0d;       // Pure black
+$neutral-dark: #140f07;        // Very dark brown
+$neutral-medium: #4a4a4a;      // Medium gray
+$neutral-light: #d3d3d3;       // Light gray
+$neutral-white: #ffffff;       // Pure white
+
+// Background Colors
+$bg-primary: linear-gradient(135deg, $primary-dark 0%, $secondary-dark 50%, $secondary-base 100%);
+$bg-secondary: linear-gradient(45deg, $secondary-base 0%, $primary-base 100%);
+$bg-card: rgba($secondary-base, 0.1);
+$bg-overlay: rgba($primary-dark, 0.8);
+
+// Text Colors
+$text-primary: $neutral-white;
+$text-secondary: $neutral-light;
+$text-accent: $accent-glow;
+$text-muted: $neutral-medium;
+
+// Border Colors
+$border-primary: $primary-base;
+$border-secondary: $secondary-base;
+$border-light: rgba($primary-light, 0.3);
+
+// Shadow Colors
+$shadow-primary: rgba($primary-base, 0.3);
+$shadow-dark: rgba($primary-dark, 0.5);
+$shadow-glow: 0 0 20px rgba($accent-glow, 0.4);
+
+// Interactive States
+$hover-primary: $primary-light;
+$hover-secondary: $secondary-light;
+$active-primary: $primary-base;
+$focus-outline: $accent-glow;
+
+// Status Colors (maintaining blue theme)
+$success: #32cd32;             // Lime green
+$warning: #ffd700;             // Golden yellow
+$error: #ff4444;               // Red
+$info: $accent-secondary;      // Bright blue

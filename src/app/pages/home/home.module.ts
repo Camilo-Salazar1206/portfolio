@@ -39,13 +39,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule,
     HttpClientModule,
     AtomicDesignModule,
-    TranslateModule.forRoot({
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
+    TranslateModule.forChild(),
   ],
   exports:[
     AtomicDesignModule,

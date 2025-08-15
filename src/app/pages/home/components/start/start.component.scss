@@ -1,50 +1,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import '../../../../../assets/styles/colors';
+
 .profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     font-family: 'Kaushan Script', cursive;
-    color: white;
+    color: $text-primary;
+    
     &__image {
         width: 190px;
         height: 190px;
         border-radius: 50%;
         margin-bottom: 20px;
+        border: 3px solid $border-primary;
+        box-shadow: $shadow-glow;
+        transition: all 0.3s ease;
+        
+        &:hover {
+            border-color: $accent-glow;
+            box-shadow: 0 0 30px rgba($accent-glow, 0.6);
+            transform: scale(1.05);
+        }
     }
+    
     &__name {
         font-size: 50px;
         margin-bottom: 10px;
         transform: rotate(-4deg);
         margin-bottom: 20px;
+        background: linear-gradient(45deg, $primary-base, $accent-glow, $secondary-base);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 20px rgba($accent-glow, 0.3);
+        animation: glow 2s ease-in-out infinite alternate;
     }
+    
     &__title {
         font-size: 16px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         font-weight: bold;
         margin-bottom: 25px;
+        color: $text-secondary;
+        text-shadow: 0 0 10px rgba($primary-base, 0.5);
     }
     &__socials {
         display: flex;
         justify-content: center;
         gap: 15px;
         margin-top: 15px;
-        &__socials__icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 40px;
-            transition: color 0.3s ease;
-            img {
-                width: 60px;
-                height: 60px;
-            }
-            &:hover {
-                color: #0077b5;
-            }
-            &.fa-github:hover {
-                color: #333;
-            }
+    }
+    
+    &__social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: rgba(#19669e, 0.1);
+        border: 1px solid rgba(#19669e, 0.3);
+        color: #19669e;
+        text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background: rgba(#19669e, 0.2);
+            border-color: #19669e;
+            color: #4ffeff;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(#19669e, 0.2);
+        }
+
+        svg {
+            width: 28px;
+            height: 28px;
         }
     }
     @media (max-width: 1024px) {
@@ -117,4 +149,27 @@
             }
         }
     }
+}
+
+// Animación de glow para el nombre
+@keyframes glow {
+    from {
+        text-shadow: 0 0 20px rgba($accent-glow, 0.3);
+        filter: brightness(1);
+    }
+    to {
+        text-shadow: 0 0 30px rgba($accent-glow, 0.6), 0 0 40px rgba($primary-base, 0.4);
+        filter: brightness(1.1);
+    }
+}
+
+@keyframes dotPulse {
+  0%, 80%, 100% {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+  40% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }

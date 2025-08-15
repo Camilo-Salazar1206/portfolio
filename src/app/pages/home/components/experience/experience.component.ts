@@ -1,33 +1,49 @@
-import { Component } from '@angular/core';
-import { JobDateExperience, JobDescription, JobTecnologies, JobTitle } from 'src/app/core/enums/routes.enums';
-import { JobCompany } from '../../../../core/enums/routes.enums';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-experience',
   templateUrl: './experience.component.html',
   styleUrls: ['./experience.component.scss']
 })
-export class ExperienceComponent {
+export class ExperienceComponent implements OnInit, OnDestroy {
+  experiences: any[] = [];
+  private subscription: Subscription = new Subscription();
 
-  JobTechnologiesMapping = {
-    FRONTEND_DEVELOPER: JobTecnologies.FRONTEND_DEVELOPER_PRAGMA,
-    FULL_STACK_DEVELOPER: JobTecnologies.FULL_STACK_DEVELOPER_TINGE,
-  };
+  constructor(private translate: TranslateService) {}
 
+  ngOnInit() {
+    this.loadExperiences();
+    
+    // Subscribe to language changes to reload experiences
+    this.subscription.add(
+      this.translate.onLangChange.subscribe(() => {
+        this.loadExperiences();
+      })
+    );
+  }
 
-  experiences = Object.keys(JobTitle).map(key => {
-    let company = JobCompany[key as keyof typeof JobCompany] || JobCompany.PRAGMA;
-    let date = JobDateExperience[key as keyof typeof JobDateExperience] || JobDateExperience.DATE_PRAGMA;
-    if (key === 'FULL_STACK_DEVELOPER') {
-      company = JobCompany.TINGE_STUDIO;
-      date = JobDateExperience.DATE_TINGE_STUDIO;
-    }
-    return {
-      title: JobTitle[key as keyof typeof JobTitle],
-      tecnologies: this.JobTechnologiesMapping[key as keyof typeof JobTitle] || 'Tecnologías no disponibles',
-      company,
-      date,
-      description: JobDescription[key as keyof typeof JobDescription],
-    }
-  }).reverse();
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
+  private loadExperiences() {
+    this.experiences = [
+      {
+        title: this.translate.instant('jobs.titles.frontend_developer'),
+        tecnologies: this.translate.instant('jobs.technologies.frontend_developer_pragma'),
+        company: this.translate.instant('jobs.companies.pragma'),
+        date: this.translate.instant('jobs.dates.pragma'),
+        description: this.translate.instant('jobs.descriptions.frontend_developer'),
+      },
+      {
+        title: this.translate.instant('jobs.titles.full_stack_developer'),
+        tecnologies: this.translate.instant('jobs.technologies.full_stack_developer_tinge'),
+        company: this.translate.instant('jobs.companies.tinge_studio'),
+        date: this.translate.instant('jobs.dates.tinge_studio'),
+        description: this.translate.instant('jobs.descriptions.full_stack_developer'),
+      }
+    ].reverse();
+  }
 }

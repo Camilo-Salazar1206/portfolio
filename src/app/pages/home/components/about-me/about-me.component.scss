@@ -1,16 +1,20 @@
+@import '../../../../../assets/styles/colors';
+
 .profile {
   margin-top: 10px;
   padding: 3%;
   width: 100%;
-  background-color: #040610b0;
+  background: rgba($secondary-dark, 0.7);
   backdrop-filter: blur(10px);
   border-radius: 15px;
+  border: 1px solid $border-light;
   margin-bottom: 20px;
+  box-shadow: $shadow-glow;
 
   &__content {
       display: flex;
       flex-wrap: wrap;
-      color: white;
+      color: $text-primary;
       align-items: center;
       gap: 10px;
       &>div {
@@ -24,21 +28,25 @@
   &__info {
       h2 {
           margin-bottom: 1%;
-          font-size: 1.8rem;
-          color: #3b82f6;
+          font-size: 1.4rem;
+          color: $primary-base;
+          text-shadow: 0 0 10px rgba($primary-base, 0.5);
       }
       .profile__info-item {
           font-size: 1rem;
           margin-bottom: 25px;
           .profile__info-item-label {
               font-weight: bold;
-              color: #3b82f6;
+              color: $accent-glow;
           }
           .profile__info-item-link {
-              color: #007bff;
+              color: $primary-light;
               text-decoration: none;
+              transition: all 0.3s ease;
               &:hover {
+                  color: $accent-glow;
                   text-decoration: underline;
+                  text-shadow: 0 0 5px rgba($accent-glow, 0.5);
               }
           }
       }
@@ -47,29 +55,38 @@
   &__bio {
       h2 {
           font-size: 1.8rem;
-          color: #3b82f6;
+          color: $primary-base;
+          text-shadow: 0 0 10px rgba($primary-base, 0.5);
       }
       .profile__bio-text {
           font-size: 1rem;
           line-height: 2.0rem;
-          color: #ffffff;
+          color: $text-primary;
           margin-bottom: 15px;
       }
   }
 
   .copy-button {
-      background-color: transparent;
+      background: transparent;
       border: none;
-      padding: 5px;
+      padding: 0.5rem;
       cursor: pointer;
-
-      img {
-          width: 20px;
-          height: 20px;
-      }
+      transition: all 0.3s ease;
+      color: $primary-light;
+      opacity: 0.6;
+      border-radius: 6px;
 
       &:hover {
-          opacity: 0.8;
+          opacity: 1;
+          color: $accent-glow;
+          background: rgba($primary-light, 0.1);
+          transform: scale(1.05);
+      }
+
+      img {
+          width: 18px;
+          height: 18px;
+          filter: brightness(0) saturate(100%) invert(71%) sepia(100%) saturate(1000%) hue-rotate(180deg);
       }
   }
 }
@@ -77,35 +94,39 @@
 /* Colocando el estilo para el mensaje de copiado fuera del selector .profile para que sea accesible globalmente */
 .copied-message {
     position: fixed;
-    top: 20px;
+    top: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: white;
-    color: blue;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background: rgba($primary-dark, 0.95);
+    color: $text-primary;
+    padding: 1rem 2rem;
+    border-radius: 15px;
     font-size: 1rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    font-weight: 500;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba($primary-light, 0.3);
+    backdrop-filter: blur(20px);
+    opacity: 0;
     animation: fadeInOut 3s forwards;
+    z-index: 1000;
 }
 
 @keyframes fadeInOut {
     0% {
         opacity: 0;
-        top: 10px;
+        top: 20px;
     }
     20% {
         opacity: 1;
-        top: 20px;
+        top: 30px;
     }
     80% {
         opacity: 1;
-        top: 20px;
+        top: 30px;
     }
     100% {
         opacity: 0;
-        top: 30px;
+        top: 40px;
     }
 }
 

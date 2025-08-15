@@ -1,8 +1,8 @@
 export enum RoutesEnum {
   Home = 'home',
-  About = 'about me',
+  AboutMe = 'about_me',
   Skills = 'skills',
-  Work = 'experience',
+  Experience = 'experience',
   Proyects = 'proyects',
   Contact = 'contact',
 }
@@ -14,6 +14,15 @@ export enum RouteTranslations {
   Skills = 'Habilidades',
   Work = 'Experiencia',
   Contact = 'Contacto',
+}
+
+export enum RouteTranslationsEN {
+  Home = 'Home',
+  About = 'About me',
+  Proyects = 'Projects',
+  Skills = 'Skills',
+  Work = 'Experience',
+  Contact = 'Contact',
 }
 
 export enum Links {
@@ -59,10 +68,10 @@ export enum iconDirection {
   Html = 'https://cdn-icons-png.flaticon.com/512/732/732212.png',
   Css = 'https://cdn-icons-png.flaticon.com/128/732/732190.png',
   Scss = 'https://cdn-icons-png.flaticon.com/512/5968/5968358.png',
-  NodeJS = 'https://static-00.iconduck.com/assets.00/node-js-icon-909x1024-ig4gm9k7.png',
+  NodeJS = 'https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png?f=webp',
   Express = 'https://img.icons8.com/color/512/express-js.png',
   MySQL = 'https://upload.wikimedia.org/wikipedia/labs/8/8e/Mysql_logo.png',
-  Github = 'https://static-00.iconduck.com/assets.00/git-icon-2048x2048-juzdf1l5.png',
+  Github = 'https://cdn-icons-png.flaticon.com/512/25/25231.png',
   vsCode = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/2048px-Visual_Studio_Code_1.35_icon.svg.png',
   MongoDB = 'https://www.svgrepo.com/show/331488/mongodb.svg',
   Aws = 'https://cdn.iconscout.com/icon/free/png-256/free-aws-logo-icon-download-in-svg-png-gif-file-formats--cloud-computing-network-server-database-brand-pack-logos-icons-1583149.png?f=webp&w=256',

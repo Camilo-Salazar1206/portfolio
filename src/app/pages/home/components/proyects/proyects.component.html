@@ -1,17 +1,16 @@
 <div class="projects-container">
   <h2 class="projects-container__title">{{ 'proyects' | translate }}</h2>
-  <div class="projects">
-      <div class="projects__content" *ngFor="let proyecto of proyectos">
-          <app-proyect-item
-              [proyectId]="proyecto.id"
-              [proyectTitle]="proyecto.title"
-              [proyectDescription]="proyecto.description"
-              [proyectImgUrl]="proyecto.imgUrl"
-              [proyectUrl]="proyecto.url"
-              [tecnologias]="proyecto.tecnologias || []"
-              [githubUrlFrontend]="proyecto.githubUrlFrontend"
-              [githubUrlBackend]="proyecto.githubUrlBackend">
-          </app-proyect-item>
-      </div>
+  <div class="projects-grid">
+      <app-proyect-item
+          *ngFor="let proyecto of proyectos"
+          [proyectId]="proyecto.id"
+          [proyectTitle]="proyecto.title"
+          [proyectDescription]="proyecto.description"
+          [proyectImgUrl]="proyecto.imgUrl"
+          [proyectUrl]="proyecto.url"
+          [tecnologias]="proyecto.tecnologias || []"
+          [githubUrlFrontend]="proyecto.githubUrlFrontend"
+          [githubUrlBackend]="proyecto.githubUrlBackend">
+      </app-proyect-item>
   </div>
 </div>

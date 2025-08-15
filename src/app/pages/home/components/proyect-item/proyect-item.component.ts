@@ -36,6 +36,36 @@ export class ProyectItemComponent {
     }
   }
 
+  openGithubUrl(url: string): void {
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
+
+  openTechDocs(tech: string): void {
+    const techUrls: { [key: string]: string } = {
+      'React': 'https://react.dev/',
+      'Node.js': 'https://nodejs.org/docs/',
+      'MongoDB': 'https://www.mongodb.com/docs/',
+      'Angular': 'https://angular.io/docs',
+      'JavaScript': 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+      'TypeScript': 'https://www.typescriptlang.org/docs/',
+      'Next.js': 'https://nextjs.org/docs',
+      'Vue.js': 'https://vuejs.org/guide/',
+      'Python': 'https://docs.python.org/',
+      'Express.js': 'https://expressjs.com/',
+      'Tailwind CSS': 'https://tailwindcss.com/docs',
+      'CSS3': 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+      'HTML5': 'https://developer.mozilla.org/en-US/docs/Web/HTML',
+      'Kotlin': 'https://kotlinlang.org/docs/'
+    };
+
+    const url = techUrls[tech];
+    if (url) {
+      window.open(url, '_blank');
+    }
+  }
+
   getGithubUrl(type: 'Backend' | 'Frontend' | 'Mobile'): string | null {
     const key = `${this.proyectId}_${type}` as keyof typeof GithubUrlProyects;
     return GithubUrlProyects[key] || null;

@@ -1,0 +1,23 @@
+<!-- Individual section skeletons that overlay each section -->
+<div class="section-skeleton nav-skeleton" *ngIf="isLoading">
+  <app-skeleton-loader [width]="'150px'" [height]="'25px'" [borderRadius]="'6px'"></app-skeleton-loader>
+  <div class="nav-links">
+    <app-skeleton-loader [width]="'60px'" [height]="'18px'" [borderRadius]="'4px'"></app-skeleton-loader>
+    <app-skeleton-loader [width]="'100px'" [height]="'18px'" [borderRadius]="'4px'"></app-skeleton-loader>
+    <app-skeleton-loader [width]="'80px'" [height]="'18px'" [borderRadius]="'4px'"></app-skeleton-loader>
+    <app-skeleton-loader [width]="'90px'" [height]="'18px'" [borderRadius]="'4px'"></app-skeleton-loader>
+    <app-skeleton-loader [width]="'75px'" [height]="'18px'" [borderRadius]="'4px'"></app-skeleton-loader>
+    <app-skeleton-loader [width]="'70px'" [height]="'18px'" [borderRadius]="'4px'"></app-skeleton-loader>
+  </div>
+</div>
+
+<div class="section-skeleton profile-skeleton" *ngIf="isLoading">
+  <app-skeleton-loader [width]="'200px'" [height]="'200px'" [borderRadius]="'50%'"></app-skeleton-loader>
+  <app-skeleton-loader [width]="'180px'" [height]="'32px'" [borderRadius]="'6px'"></app-skeleton-loader>
+  <app-skeleton-loader [width]="'280px'" [height]="'20px'" [borderRadius]="'4px'"></app-skeleton-loader>
+  <div class="social-icons">
+    <app-skeleton-loader [width]="'40px'" [height]="'40px'" [borderRadius]="'8px'"></app-skeleton-loader>
+    <app-skeleton-loader [width]="'40px'" [height]="'40px'" [borderRadius]="'8px'"></app-skeleton-loader>
+    <app-skeleton-loader [width]="'40px'" [height]="'40px'" [borderRadius]="'8px'"></app-skeleton-loader>
+  </div>
+</div>

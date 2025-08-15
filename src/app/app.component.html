@@ -1,1 +1,12 @@
+<!-- Full screen loading overlay with dots -->
+<div class="global-loading-overlay" *ngIf="isLoading">
+  <div class="loading-dots">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+  <div class="loading-text">Cargando...</div>
+</div>
+
 <router-outlet></router-outlet>
+<app-language-selector></app-language-selector>

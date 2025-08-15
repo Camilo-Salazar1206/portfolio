@@ -1,24 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-
-import { Links, urlButtons } from 'src/app/core/enums/routes.enums';
 
 @Component({
   selector: 'app-start',
   templateUrl: './start.component.html',
   styleUrls: ['./start.component.scss']
 })
-export class StartComponent {
-  urlButtons = urlButtons;
-  cvIcon: string = "assets/img/CV-removebg-preview.png";
-  avatar: string = "assets/img/profile_image.jpg";
+export class StartComponent implements OnInit {
 
-
-  linkedinUrl: string = Links.LINKEDIN;
-  githubUrl: string = Links.GITHUB;
-  googleDriveUrl: string = Links.GOOGLE_DRIVE;
+  avatar = 'assets/img/profile_image.jpg';
+  linkedinUrl = 'https://www.linkedin.com/in/camilo-salazar-dev/';
+  githubUrl = 'https://github.com/Camilo-Salazar1206';
+  googleDriveUrl = 'https://drive.google.com/file/d/1Ej5sOYzHJJOJoJJJJJJJJJJJJJJJJJJJ/view?usp=sharing';
 
   constructor(private translate: TranslateService) {
     this.translate.setDefaultLang('es');
+  }
+
+  ngOnInit() {
+    // Component ready
   }
 }
