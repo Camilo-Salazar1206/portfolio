@@ -1,6 +1,6 @@
 <nav class="navbar" [class.scrolled]="isScrolled">
   <div class="navbar__logo">
-    <a href="#start" (click)="scrollToElement($event, 'start')">
+    <a href="#home" (click)="scrollToElement($event, 'home')">
       <span class="navbar__logo-text">Camilo Salazar</span>
     </a>
   </div>
@@ -17,10 +17,13 @@
     </ul>
   </div>
 
-  <button class="navbar__toggle" (click)="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
+  <button class="navbar__toggle" [class.active]="isMenuOpen" (click)="toggleMenu()">
+    <span *ngIf="!isMenuOpen"></span>
+    <span *ngIf="!isMenuOpen"></span>
+    <span *ngIf="!isMenuOpen"></span>
+    <svg *ngIf="isMenuOpen" class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
   </button>
 
   <div class="side-menu" [class.open]="isMenuOpen">
@@ -28,7 +31,7 @@
       <li class="side-menu__item" *ngFor="let route of routeValues">
         <a class="side-menu__link" 
            [href]="'#' + route.id" 
-           (click)="scrollToElement($event, route.id)">
+           (click)="scrollToElement($event, route.id); toggleMenu()">
           {{ route.translation }}
         </a>
       </li>
@@ -36,4 +39,3 @@
   </div>
 </nav>
 
-<div class="overlay" [class.show]="isMenuOpen" (click)="toggleMenu()"></div>

@@ -62,8 +62,16 @@ export class NavComponent implements OnInit, OnDestroy {
     const clickedInsideMenu = menu?.contains(event.target as Node);
     const clickedInsideToggle = toggleButton?.contains(event.target as Node);
 
-    if (!clickedInsideMenu && !clickedInsideToggle) {
+    if (!clickedInsideMenu && !clickedInsideToggle && this.isMenuOpen) {
       this.isMenuOpen = false;
+    }
+  }
+
+  @HostListener('document:keydown', ['$event'])
+  handleKeyboardNavigation(event: KeyboardEvent) {
+    if (event.key === 'Escape' && this.isMenuOpen) {
+      this.isMenuOpen = false;
+      event.preventDefault();
     }
   }
 
@@ -89,6 +97,11 @@ export class NavComponent implements OnInit, OnDestroy {
     event.preventDefault();
     const element = document.getElementById(elementId);
     if (!element) return;
+
+    // Close mobile menu immediately when clicking a link
+    if (this.isMenuOpen) {
+      this.isMenuOpen = false;
+    }
 
     const offset = this.numbers.MenuOffset;
     const targetPosition = element.getBoundingClientRect().top + window.scrollY - offset;
@@ -119,7 +132,6 @@ export class NavComponent implements OnInit, OnDestroy {
     };
 
     requestAnimationFrame(animation);
-    this.isMenuOpen = false;
   }
 
   toggleMenu() {
