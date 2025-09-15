@@ -23,7 +23,6 @@
   border: 1px solid $border-light;
   transition: background 0.3s ease;
 
-
   &.scrolled {
     background: rgba($primary-dark, 0.9);
     box-shadow: $shadow-glow;
@@ -117,7 +116,7 @@
       height: 20px;
       stroke: $primary-base;
       transition: all 0.3s ease;
-      
+
       &:hover {
         stroke: $accent-glow;
       }
@@ -129,6 +128,7 @@
   }
 }
 
+/* ===== Side menu ===== */
 .side-menu {
   position: fixed;
   border-radius: 15px;
@@ -146,10 +146,14 @@
   transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1), box-shadow 0.3s ease;
   z-index: 1010;
   overflow-y: auto;
+  visibility: hidden;          /* <— agregado */
+  pointer-events: none;        /* <— agregado */
 
   &.open {
     left: 0;
     box-shadow: 10px 0 30px rgba($primary-base, 0.3);
+    visibility: visible;       /* <— agregado */
+    pointer-events: auto;      /* <— agregado */
   }
 
   @media (max-width: 480px) {
@@ -171,7 +175,7 @@
     opacity: 0;
     transform: translateX(-20px);
     animation: slideInLeft 0.3s ease forwards;
-    
+
     &:nth-child(1) { animation-delay: 0.1s; }
     &:nth-child(2) { animation-delay: 0.2s; }
     &:nth-child(3) { animation-delay: 0.3s; }
@@ -222,6 +226,13 @@
   }
 }
 
+/* Ocultar completamente el side-menu en pantallas ≥901px */
+@media (min-width: 901px) {
+  .side-menu {
+    display: none !important;
+  }
+}
+
 .overlay {
   display: none;
 }
@@ -242,7 +253,7 @@
 @media (max-width: 900px) {
   .navbar {
     padding: 0.75rem 1rem;
-    
+
     &__logo {
       font-size: 1.3rem;
     }
@@ -253,19 +264,19 @@
   :host {
     padding: 0.75rem;
   }
-  
+
   .navbar {
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
-    
+
     &__logo {
       font-size: 1.2rem;
     }
-    
+
     &__toggle {
       width: 24px;
       height: 20px;
-      
+
       span {
         height: 2px;
       }
