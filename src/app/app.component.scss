@@ -5,19 +5,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 18px 36px;
-  background: rgba(15,23,42,0.72); 
+  background: rgba(15,23,42,0.72);
   box-shadow: 0 4px 24px 0 rgba(30,41,59,0.10);
   backdrop-filter: blur(12px);
   border: none;
   transition: background 0.3s, border-radius 0.3s, box-shadow 0.3s;
 
   &.scrolled {
-    background: rgba(15,23,42,0.72); 
+    background: rgba(15,23,42,0.72);
     box-shadow: 0 8px 32px 0 rgba(37,99,235,0.18);
     border-radius: 0 0 18px 18px;
   }
 
-  // ...resto del código igual...
+
 }
 
 .global-loading-overlay {
@@ -52,16 +52,16 @@
     animation: dotPulse 1.2s infinite ease-in-out both;
     box-shadow: 0 0 20px rgba(79, 254, 255, 0.6);
 
-    &:nth-child(1) { 
-      animation-delay: -0.32s; 
+    &:nth-child(1) {
+      animation-delay: -0.32s;
       background: linear-gradient(45deg, #31aeff, #19669e);
     }
-    &:nth-child(2) { 
-      animation-delay: -0.16s; 
+    &:nth-child(2) {
+      animation-delay: -0.16s;
       background: linear-gradient(45deg, #4ffeff, #31aeff);
     }
-    &:nth-child(3) { 
-      animation-delay: 0s; 
+    &:nth-child(3) {
+      animation-delay: 0s;
       background: linear-gradient(45deg, #19669e, #4ffeff);
     }
   }

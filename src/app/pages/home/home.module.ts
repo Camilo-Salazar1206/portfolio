@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './components/nav/nav.component';
 import { RouterModule } from '@angular/router';
@@ -39,6 +40,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     RouterModule,
     HttpClientModule,
     AtomicDesignModule,
+     HomeRoutingModule,
     TranslateModule.forChild(),
   ],
   exports:[

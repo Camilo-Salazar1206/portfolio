@@ -11,7 +11,7 @@ export enum RouteTranslations {
   Home = 'Inicio',
   About = 'Acerca de mí',
   Proyects = 'Proyectos',
-  Skills = 'Habilidades',
+  Skills = 'Tecnologías',
   Work = 'Experiencia',
   Contact = 'Contacto',
 }

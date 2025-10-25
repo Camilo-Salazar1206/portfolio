@@ -3,18 +3,23 @@
     justify-content: center;
     flex-direction: column;
     min-height: 100vh;
+    will-change: transform; /* Optimiza las transformaciones */
+    -webkit-overflow-scrolling: touch; /* Mejora el scroll en iOS */
 }
 
 .home__nav {
     position: sticky;
     top: 0;
     z-index: 10;
+    transform: translateZ(0); /* Fuerza la aceleración por GPU */
 }
 
 .home__main {
     padding: 20px;
     padding-top: 120px;
     flex-grow: 1;
+    transform: translateZ(0); /* Mejora el rendimiento del scroll */
+    contain: content; /* Optimiza el repintado */
 }
 
 .home__start,

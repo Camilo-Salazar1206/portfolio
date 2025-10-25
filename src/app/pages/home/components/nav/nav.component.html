@@ -1,39 +1,50 @@
-<nav class="navbar" [class.scrolled]="isScrolled">
+<nav class="navbar">
   <div class="navbar__logo">
-    <a href="#home" (click)="scrollToElement($event, 'home')">
+    <a href="#home" (click)="scrollToSection($event, 'home')">
       <span class="navbar__logo-text">Camilo Salazar</span>
     </a>
   </div>
-  
+
+  <!-- Menú de escritorio -->
   <div class="navbar__menu">
     <ul class="navbar__nav">
-      <li class="navbar__item" *ngFor="let route of routeValues">
-        <a class="navbar__link" 
-           [href]="'#' + route.id" 
-           (click)="scrollToElement($event, route.id)">
-          {{ route.translation }}
-        </a>
-      </li>
+      <li class="navbar__item"><a class="navbar__link" href="#home" (click)="scrollToSection($event, 'home')">{{ 'navigation.home' | translate }}</a></li>
+      <li class="navbar__item"><a class="navbar__link" href="#about_me" (click)="scrollToSection($event, 'about_me')">{{ 'navigation.about_me' | translate }}</a></li>
+      <li class="navbar__item"><a class="navbar__link" href="#skills" (click)="scrollToSection($event, 'skills')">{{ 'navigation.skills' | translate }}</a></li>
+      <li class="navbar__item"><a class="navbar__link" href="#experience" (click)="scrollToSection($event, 'experience')">{{ 'navigation.experience' | translate }}</a></li>
+      <li class="navbar__item"><a class="navbar__link" href="#proyects" (click)="scrollToSection($event, 'proyects')">{{ 'navigation.proyects' | translate }}</a></li>
+      <li class="navbar__item"><a class="navbar__link" href="#contact" (click)="scrollToSection($event, 'contact')">{{ 'navigation.contact' | translate }}</a></li>
     </ul>
   </div>
-
-  <button class="navbar__toggle" [class.active]="isMenuOpen" (click)="toggleMenu()">
-    <span *ngIf="!isMenuOpen"></span>
-    <span *ngIf="!isMenuOpen"></span>
-    <span *ngIf="!isMenuOpen"></span>
-    <svg *ngIf="isMenuOpen" class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M15 18l-6-6 6-6"/>
-    </svg>
+  <button type="button" class="navbar__toggle" aria-label="Toggle navigation" (click)="toggleMenu()" [class.active]="isMenuOpen">
+    <span class="bar bar1"></span>
+    <span class="bar bar2"></span>
+    <span class="bar bar3"></span>
   </button>
 
+  <!-- Overlay para cerrar el menú lateral -->
+  <div class="overlay" [class.open]="isMenuOpen" (click)="toggleMenu()"></div>
+
+  <!-- Menú lateral simple -->
   <div class="side-menu" [class.open]="isMenuOpen">
     <ul class="side-menu__nav">
-      <li class="side-menu__item" *ngFor="let route of routeValues">
-        <a class="side-menu__link" 
-           [href]="'#' + route.id" 
-           (click)="scrollToElement($event, route.id); toggleMenu()">
-          {{ route.translation }}
-        </a>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#home" (click)="scrollToSection($event, 'home')">{{ 'navigation.home' | translate }}</a>
+      </li>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#about_me" (click)="scrollToSection($event, 'about_me')">{{ 'navigation.about_me' | translate }}</a>
+      </li>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#skills" (click)="scrollToSection($event, 'skills')">{{ 'navigation.skills' | translate }}</a>
+      </li>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#experience" (click)="scrollToSection($event, 'experience')">{{ 'navigation.experience' | translate }}</a>
+      </li>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#proyects" (click)="scrollToSection($event, 'proyects')">{{ 'navigation.proyects' | translate }}</a>
+      </li>
+      <li class="side-menu__item">
+        <a class="side-menu__link" href="#contact" (click)="scrollToSection($event, 'contact')">{{ 'navigation.contact' | translate }}</a>
       </li>
     </ul>
   </div>

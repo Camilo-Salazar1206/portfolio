@@ -35,6 +35,10 @@
       .profile__info-item {
           font-size: 1rem;
           margin-bottom: 25px;
+          span, a {
+            text-align: left;
+            display: inline-block;
+          }
           .profile__info-item-label {
               font-weight: bold;
               color: $accent-glow;

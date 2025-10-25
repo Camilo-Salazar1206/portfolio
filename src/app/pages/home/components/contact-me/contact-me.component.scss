@@ -24,7 +24,7 @@
     text-shadow: 0 0 30px rgba(79, 254, 255, 0.3);
     position: relative;
     text-align: center;
-    
+
     &::after {
         content: '';
         position: absolute;
@@ -94,8 +94,14 @@
 
   &__text-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
+    flex-direction: row;
+  }
+
+  &__text {
+    text-align: left;
+    display: inline-block;
   }
 
   &__divider {
@@ -176,31 +182,47 @@
     }
   }
 
-  .copied-message {
-    position: fixed;
-    top: 30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba($primary-dark, 0.95);
-    color: $text-primary;
-    padding: 1rem 2rem;
-    border-radius: $border-radius;
-    font-size: 1rem;
-    font-weight: 500;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba($primary-light, 0.3);
-    backdrop-filter: blur(20px);
-    opacity: 0;
-    animation: fadeInOut 3s forwards;
-    z-index: 1000;
-  }
+// ...existing code...
+// El toast se unifica visualmente con el de about-me
+.copied-message {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba($primary-dark, 0.95);
+  color: $text-primary;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba($primary-light, 0.3);
+  backdrop-filter: blur(20px);
+  opacity: 0;
+  animation: fadeInOut 2s forwards;
+  z-index: 1000;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
 
-  @keyframes fadeInOut {
-    0% { opacity: 0; top: 20px; }
-    20% { opacity: 1; top: 30px; }
-    80% { opacity: 1; top: 30px; }
-    100% { opacity: 0; top: 40px; }
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    top: 20px;
   }
+  20% {
+    opacity: 1;
+    top: 30px;
+  }
+  80% {
+    opacity: 1;
+    top: 30px;
+  }
+  100% {
+    opacity: 0;
+    top: 40px;
+  }
+}
 }
 
 @media (max-width: 768px) {

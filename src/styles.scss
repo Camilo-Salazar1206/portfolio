@@ -16,10 +16,18 @@ html {
 
 body {
     font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
-    background: linear-gradient(180deg, $primary-dark 0%, $secondary-dark 100%);
-    background-attachment: fixed;
+    background: $primary-dark;
     color: $text-primary;
     min-height: 100vh;
+    /* Optimización para móviles */
+    overscroll-behavior: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    @media (min-width: 901px) {
+        background: linear-gradient(180deg, $primary-dark 0%, $secondary-dark 100%);
+        background-attachment: fixed;
+    }
 }
 
 ::-webkit-scrollbar {
@@ -34,7 +42,7 @@ body {
 ::-webkit-scrollbar-thumb {
     background-color: $primary-base;
     border-radius: 20px;
-    
+
     &:hover {
         background-color: $hover-primary;
     }
